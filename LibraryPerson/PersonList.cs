@@ -36,6 +36,7 @@ namespace PersonListLibrary
         }
 
         /// <summary>
+        /// //TODO: RSDN
         /// Инициализирует новый экземпляр класса PersonList с указанным списком персон и именем списка.
         /// </summary>
         /// <param name="listPerson">Список персон.</param>

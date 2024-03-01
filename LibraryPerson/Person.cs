@@ -45,6 +45,7 @@ namespace PersonListLibrary
         public Person(string firstName, string lastName, 
             int age, Gender gender)
         {
+            //TODO: remove
             // Инициализация полей через свойства.
             FirstName = firstName;
             LastName = lastName;
@@ -87,7 +88,7 @@ namespace PersonListLibrary
                 else
                 {
                     throw new ArgumentException("Фамилия должна содержать " +
-                        "только русские или английские символы,");
+                        "только русские или английские символы");
                 }
             }
         }
@@ -100,8 +101,10 @@ namespace PersonListLibrary
             get { return _age; }
             set
             {
+                //TODO: duplication
                 if (value < 0 || value > 120)
                 {
+                    //TODO: duplication
                     throw new ArgumentException("Возраст не может быть " +
                         "отрицательным или больше 120");
                 }
@@ -151,17 +154,13 @@ namespace PersonListLibrary
             };
 
             string firstName, lastName;
+            //TODO: duplication
             int age = random.Next(0, 100);
             Gender gender = (Gender)random.Next(0, 2);
 
-            if (gender == Gender.Male)
-            {
-                firstName = maleNames[random.Next(0, maleNames.Count)];
-            }
-            else
-            {
-                firstName = femaleNames[random.Next(0, femaleNames.Count)];  
-            }
+            firstName = gender == Gender.Male 
+                ? maleNames[random.Next(0, maleNames.Count)] 
+                : femaleNames[random.Next(0, femaleNames.Count)];
 
             lastName = lastNames[random.Next(0, lastNames.Count)];
 
@@ -185,9 +184,11 @@ namespace PersonListLibrary
             {
                 if (char.IsLetter(character))
                 {
+                    //TODO: duplication
                     if ((character >= 'а' && character <= 'я') || 
                         (character >= 'А' && character <= 'Я'))
                     {
+                        //TODO: {}
                         if (hasEnglishLetters) return false;
 
                         hasRussianLetters = true;
@@ -195,11 +196,13 @@ namespace PersonListLibrary
                     else if ((character >= 'a' && character <= 'z') || 
                         (character >= 'A' && character <= 'Z'))
                     {
+                        //TODO: {}
                         if (hasRussianLetters) return false;
 
                         hasEnglishLetters = true;
                     }
                 }
+                //TODO: {}
                 else if (character != ' ' && character != '-') return false;
 
             }
@@ -226,6 +229,7 @@ namespace PersonListLibrary
             {
                 if (char.IsLetter(character))
                 {
+
                     if ((character >= 'а' && character <= 'я') || 
                         (character >= 'А' && character <= 'Я'))
                     {

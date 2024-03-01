@@ -27,8 +27,10 @@ namespace PersonListLab
         private static Person ReadPersonFromConsole()
         {
             Person person = new Person();
-            bool error = false;
 
+            //TODO: remove
+            bool error = false;
+            //TODO: duplication
             do
             {
                 try
@@ -44,7 +46,7 @@ namespace PersonListLab
                 }
             }
             while (error);
-
+            //TODO: duplication
             do
             {
                 try
@@ -60,7 +62,7 @@ namespace PersonListLab
                 }
             }
             while (error);
-
+            //TODO: duplication
             do
             {
                 try
@@ -81,7 +83,7 @@ namespace PersonListLab
                 }
             }
             while (error);
-
+            //TODO: duplication
             do
             {
                 try
@@ -204,7 +206,7 @@ namespace PersonListLab
 
             Console.WriteLine("Шаг 4: Удаление второго человека" +
                 " из первого списка \n");
-
+            //TODO: remove
             Person duplicatePerson = firstList.GetElementByIndex(index);
 
             firstList.ClearListByIndex(index);

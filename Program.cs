@@ -10,6 +10,7 @@ namespace OOPLR1
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Ghbdtn");
         }
     }
 }

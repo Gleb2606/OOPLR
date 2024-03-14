@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace PersonListLibrary
 {
@@ -192,14 +193,14 @@ namespace PersonListLibrary
             {
                 if (char.IsLetter(character))
                 {
-                    //TODO: duplication
+                    //TODO: duplication +
                     if ((character >= 'а' && character <= 'я') ||
                         (character >= 'А' && character <= 'Я'))
                     {
                         //TODO: {} +
-                        if (hasEnglishLetters) 
+                        if (hasEnglishLetters)
                         {
-                            return false; 
+                            return false;
                         }
 
                         hasRussianLetters = true;
@@ -208,16 +209,16 @@ namespace PersonListLibrary
                         (character >= 'A' && character <= 'Z'))
                     {
                         //TODO: {} +
-                        if (hasRussianLetters) 
+                        if (hasRussianLetters)
                         {
-                            return false; 
+                            return false;
                         }
 
                         hasEnglishLetters = true;
                     }
                 }
                 //TODO: {} +
-                else if (character != ' ' && character != '-') 
+                else if (character != ' ' && character != '-')
                 {
                     return false;
                 }
@@ -238,29 +239,14 @@ namespace PersonListLibrary
         {
             if (string.IsNullOrWhiteSpace(name))
             {
-                throw new ArgumentException("Имя не должно быть пустым" +
+                throw new ArgumentException(
+                    "Имя не должно быть пустым" +
                     " или содержать только пробелы.");
             }
 
-            foreach (char character in name)
-            {
-                if (char.IsLetter(character))
-                {
-
-                    if ((character >= 'а' && character <= 'я') || 
-                        (character >= 'А' && character <= 'Я'))
-                    {
-                        return Language.Russian;
-                    }
-                    else if ((character >= 'a' && character <= 'z') || 
-                        (character >= 'A' && character <= 'Z'))
-                    {
-                        return Language.English;
-                    }
-                }
-            }
-
-            return Language.Russian;
+            return name.Any(c => char.IsLetter(c) &&
+                ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))) ?
+                Language.English : Language.Russian;
         }
 
         /// <summary>
@@ -276,34 +262,13 @@ namespace PersonListLibrary
 
             Language nameLanguage = DetectLanguage(name);
 
-            foreach (char character in lastName)
-            {
-                if (char.IsLetter(character))
-                {
-                    if (nameLanguage == Language.Russian)
-                    {
-                        if (!((character >= 'а' && character <= 'я') ||
-                            (character >= 'А' && character <= 'Я')))
-                        {
-                            return false;
-                        }
-                    }
-                    else if (nameLanguage == Language.English)
-                    {
-                        if (!((character >= 'a' && character <= 'z') ||
-                            (character >= 'A' && character <= 'Z')))
-                        {
-                            return false;
-                        }
-                    }
-                }
-                else if (character != ' ' && character != '-')
-                {
-                    return false;
-                }
-            }
-
-            return true;
+            return lastName.All(c =>
+                char.IsLetter(c) && (
+                    (nameLanguage == Language.Russian && ((c >= 'а' && c <= 'я') ||
+                    (c >= 'А' && c <= 'Я'))) ||
+                    (nameLanguage == Language.English && ((c >= 'a' && c <= 'z') ||
+                    (c >= 'A' && c <= 'Z'))))
+                || c == ' ' || c == '-');
         }
 
         /// <summary>
@@ -314,14 +279,8 @@ namespace PersonListLibrary
         /// <returns>Строка с правильным форматом регистра.</returns>
         public static string ConvertToProperCase(string input)
         {
-            string[] nameParts = input.Split(' ', '-', '_');
-            for (int i = 0; i < nameParts.Length; i++)
-            {
-                nameParts[i] = char.ToUpper(nameParts[i][0]) + 
-                    nameParts[i].Substring(1).ToLower();
-            }
-
-            return string.Join(" ", nameParts);
+            return string.Join(" ", input.Split(' ', '-', '_').Select(s =>
+                char.ToUpper(s[0]) + s.Substring(1).ToLower()));
         }
     }
 }

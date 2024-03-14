@@ -6,7 +6,14 @@ namespace PersonListLibrary
     /// </summary>
     public enum Gender
     {
-       Male,
-       Female
+        /// <summary>
+        /// Мужской пол.
+        /// </summary>
+        Male,
+
+        /// <summary>
+        /// Женский пол.
+        /// </summary>
+        Female
     }
 }

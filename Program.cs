@@ -28,98 +28,59 @@ namespace PersonListLab
         {
             Person person = new Person();
 
-            //TODO: remove
-            bool error = false;
-            //TODO: duplication
-            do
+            //TODO: remove+
+
+            //TODO: duplication+
+
+            List<Action> actions = new List<Action>()
             {
-                try
+                //TODO: duplication +
+                () =>
                 {
-                    Console.Write("Введите имя: ");
-                    person.FirstName = Console.ReadLine();
-                    error = false;
-                }
-                catch (Exception ex)
+                     Console.Write("Введите имя: ");
+                     person.FirstName = Console.ReadLine();
+                },
+                //TODO: duplication +
+                () =>
                 {
-                    error = true;
-                    Console.WriteLine(ex.Message);
-                }
-            }
-            while (error);
-            //TODO: duplication
-            do
-            {
-                try
+                     Console.Write("Введите фамилию: ");
+                     person.LastName = Console.ReadLine();
+                },
+                //TODO: duplication +
+                () =>
                 {
-                    Console.Write("Введите фамилию: ");
-                    person.LastName = Console.ReadLine();
-                    error = false;
-                }
-                catch (Exception ex)
+                     Console.Write("Введите возраст: ");
+                     person.Age = Convert.ToInt32(Console.ReadLine());
+                },
+                //TODO: duplication +
+                () =>
                 {
-                    error = true;
-                    Console.WriteLine(ex.Message);
-                }
-            }
-            while (error);
-            //TODO: duplication
-            do
-            {
-                try
-                {
-                    Console.Write("Введите возраст: ");
-                    person.Age = Convert.ToInt32(Console.ReadLine());
-                    error = false;
-                }
-                catch (FormatException)
-                {
-                    error = true;
-                    Console.WriteLine("Возраст не может содержать символов");
-                }
-                catch (ArgumentException ex)
-                {
-                    error = true;
-                    Console.WriteLine(ex.Message);
-                }
-            }
-            while (error);
-            //TODO: duplication
-            do
-            {
-                try
-                {
-                    Console.Write("Введите пол (1 - мужской; 0 - женский): ");
-                    int genderFromConsole = 
+                     Console.Write("Введите пол " +
+                         "(1 - мужской; 0 - женский): ");
+                    int genderFromConsole =
                         Convert.ToInt32(Console.ReadLine());
 
                     switch (genderFromConsole)
                     {
                         case 1:
                             person.Gender = Gender.Male;
-                            error = false;
                             break;
 
                         case 0:
                             person.Gender = Gender.Female;
-                            error = false;
                             break;
 
                         default:
-                            error = true;
-                            throw new ArgumentException("Некорректный ввод." +
+                            throw new ArgumentException("Некорректный ввод."+
                                 " Введите 0 или 1.");
                     }
                 }
-                catch (FormatException)
-                {
-                    Console.WriteLine("Некорректный ввод. Повторите ввод.");
-                }
-                catch (ArgumentException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
+            };
+
+            foreach (Action action in actions)
+            {
+                ActionHandler(action);
             }
-            while (error);
 
             return person;
         }
@@ -144,10 +105,38 @@ namespace PersonListLab
         }
 
         /// <summary>
-        /// Главный метод программы.
+        /// Метод обработки возможных исключений.
         /// </summary>
-        /// <param name="args">Аргументы командной строки.</param>
-        private static void Main(string[] args)
+        /// <param name="action">Действие.</param>
+        public static void ActionHandler(Action action)
+        {
+            while (true)
+            {
+                try
+                {
+                    action.Invoke();
+                    return;
+                }
+
+                catch (Exception ex)
+                {
+                    var exceptionType = ex.GetType();
+                    if (exceptionType == typeof(FormatException) ||
+                        exceptionType == typeof(ArgumentOutOfRangeException) ||
+                        exceptionType == typeof(ArgumentException))
+
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                }
+            }
+        }
+
+            /// <summary>
+            /// Главный метод программы.
+            /// </summary>
+            /// <param name="args">Аргументы командной строки.</param>
+            private static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Green;
 
@@ -206,8 +195,7 @@ namespace PersonListLab
 
             Console.WriteLine("Шаг 4: Удаление второго человека" +
                 " из первого списка \n");
-            //TODO: remove
-            Person duplicatePerson = firstList.GetElementByIndex(index);
+            //TODO: remove +
 
             firstList.ClearListByIndex(index);
 

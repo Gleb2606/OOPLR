@@ -29,6 +29,16 @@ namespace PersonListLibrary
         private Gender _gender;
 
         /// <summary>
+        /// Константа хранит минимальный возраст.
+        /// </summary>
+        private const int _minAge = 0;
+
+        /// <summary>
+        /// Константа хранит максимальный возраст.
+        /// </summary>
+        private const int _maxAge = 120;
+
+        /// <summary>
         /// Конструктор по умолчанию.
         /// </summary>
         public Person() : this("Неизвестно", "Неизвестно", 0, Gender.Male)
@@ -45,8 +55,7 @@ namespace PersonListLibrary
         public Person(string firstName, string lastName, 
             int age, Gender gender)
         {
-            //TODO: remove
-            // Инициализация полей через свойства.
+            //TODO: remove +
             FirstName = firstName;
             LastName = lastName;
             Age = age;
@@ -87,8 +96,8 @@ namespace PersonListLibrary
                 }
                 else
                 {
-                    throw new ArgumentException("Фамилия должна содержать " +
-                        "только русские или английские символы");
+                    throw new ArgumentException("Фамилия и имя " +
+                        "должны быть написаны на одном языке");
                 }
             }
         }
@@ -101,12 +110,12 @@ namespace PersonListLibrary
             get { return _age; }
             set
             {
-                //TODO: duplication
-                if (value < 0 || value > 120)
+                //TODO: duplication +
+                if (value < _minAge || value > _maxAge)
                 {
-                    //TODO: duplication
-                    throw new ArgumentException("Возраст не может быть " +
-                        "отрицательным или больше 120");
+                    //TODO: duplication +
+                    throw new ArgumentException($"Возраст должен находится "+
+                        $"в пределах от {_minAge} до {_maxAge}");
                 }
                 _age = value;
             }
@@ -123,7 +132,6 @@ namespace PersonListLibrary
         /// <returns>Строковое представление информации о человеке.</returns>
         public string GetPersonInfo()
         {
-            // Форматированная строка с информацией о человеке.
             return $"{FirstName} {LastName}, возраст: {Age}, пол: {Gender}";
         }
 
@@ -149,13 +157,13 @@ namespace PersonListLibrary
 
             List<string> lastNames = new List<string>()
             {
-                "Майринк", "Гоголь", "Гёте", "Смит", "Рузвельт",
+                "Майринк", "Гоголь", "Гёте", "Сэндлер", "Рузвельт",
                 "Ататюрк", "Сильвер", "Бонс", "Пьюзо", "Милей"
             };
 
             string firstName, lastName;
-            //TODO: duplication
-            int age = random.Next(0, 100);
+            //TODO: duplication +
+            int age = random.Next(_minAge, _maxAge);
             Gender gender = (Gender)random.Next(0, 2);
 
             firstName = gender == Gender.Male 
@@ -185,25 +193,34 @@ namespace PersonListLibrary
                 if (char.IsLetter(character))
                 {
                     //TODO: duplication
-                    if ((character >= 'а' && character <= 'я') || 
+                    if ((character >= 'а' && character <= 'я') ||
                         (character >= 'А' && character <= 'Я'))
                     {
-                        //TODO: {}
-                        if (hasEnglishLetters) return false;
+                        //TODO: {} +
+                        if (hasEnglishLetters) 
+                        {
+                            return false; 
+                        }
 
                         hasRussianLetters = true;
                     }
-                    else if ((character >= 'a' && character <= 'z') || 
+                    else if ((character >= 'a' && character <= 'z') ||
                         (character >= 'A' && character <= 'Z'))
                     {
-                        //TODO: {}
-                        if (hasRussianLetters) return false;
+                        //TODO: {} +
+                        if (hasRussianLetters) 
+                        {
+                            return false; 
+                        }
 
                         hasEnglishLetters = true;
                     }
                 }
-                //TODO: {}
-                else if (character != ' ' && character != '-') return false;
+                //TODO: {} +
+                else if (character != ' ' && character != '-') 
+                {
+                    return false;
+                }
 
             }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace PersonListLibrary
@@ -20,11 +21,6 @@ namespace PersonListLibrary
         private string _nameListPerson;
 
         /// <summary>
-        /// Поле список персон.
-        /// </summary>
-        private int _listLength;
-
-        /// <summary>
         /// Инициализирует новый экземпляр класса PersonList с указанным именем списка.
         /// </summary>
         /// <param name="nameListPerson">Имя списка персон.</param>
@@ -32,7 +28,6 @@ namespace PersonListLibrary
         {
             _nameListPerson = nameListPerson;
             _listPerson = new List<Person>();
-            _listLength = 0;
         }
 
         /// <summary>
@@ -45,7 +40,6 @@ namespace PersonListLibrary
         {
             _nameListPerson = nameListPerson;
             _listPerson = listPerson;
-            _listLength = listPerson.Count;
         }
 
         /// <summary>
@@ -55,7 +49,6 @@ namespace PersonListLibrary
         public void AddPersonToList(Person person)
         {
             _listPerson.Add(person);
-            _listLength++;
         }
 
         /// <summary>
@@ -79,7 +72,7 @@ namespace PersonListLibrary
         /// Удаляет персону из списка по индексу.
         /// </summary>
         /// <param name="index">Индекс персоны для удаления.</param>
-        public void ClearListByIndex(int index)
+        public void ClearByIndex(int index)
         {
             _listPerson.RemoveAt(index);
         }
@@ -89,7 +82,7 @@ namespace PersonListLibrary
         /// </summary>
         /// <param name="start">Индекс начала диапазона.</param>
         /// <param name="end">Индекс конца диапазона.</param>
-        public void ClearListByRange(int start, int end)
+        public void ClearByRange(int start, int end)
         {
             _listPerson.RemoveRange(start, end);
         }
@@ -98,9 +91,9 @@ namespace PersonListLibrary
         /// Возвращает внутреннюю длину списка персон.
         /// </summary>
         /// <returns>Длина списка персон.</returns>
-        public int GetListLength()
+        public int GetLength()
         {
-            return _listLength;
+            return _listPerson.Count();
         }
 
         /// <summary>
@@ -144,7 +137,7 @@ namespace PersonListLibrary
         /// Возвращает строковое представление информации о списке персон.
         /// </summary>
         /// <returns>Строковое представление информации о списке персон.</returns>
-        public string GetListInfo()
+        public string GetInfo()
         {
             StringBuilder stringBuilder = new StringBuilder();
 
@@ -152,11 +145,8 @@ namespace PersonListLibrary
 
             foreach (var person in _listPerson)
             {
-                stringBuilder.AppendLine
-                    //TODO: duplication
-                    ($"{person.LastName} {person.FirstName}," +
-                    $" возраст: {person.Age}," +
-                    $" пол: {person.Gender}");
+                stringBuilder.AppendLine(person.GetInfo());
+                //TODO: duplication +
             }
 
             stringBuilder.AppendLine("");

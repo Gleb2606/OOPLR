@@ -129,7 +129,7 @@ namespace PersonListLibrary
         /// Возвращает строковое представление информации о человеке.
         /// </summary>
         /// <returns>Строковое представление информации о человеке.</returns>
-        public string GetPersonInfo()
+        public string GetInfo()
         {
             return $"{FirstName} {LastName}, возраст: {Age}, пол: {Gender}";
         }
@@ -138,7 +138,7 @@ namespace PersonListLibrary
         /// Возвращает случайного человека с случайными параметрами.
         /// </summary>
         /// <returns>Случайный человек.</returns>
-        public static Person GetRandomPerson()
+        public static Person GetRandom()
         {
             Random random = new Random();
 
@@ -226,13 +226,13 @@ namespace PersonListLibrary
         /// </summary>
         /// <param name="name">Имя для определения языка.</param>
         /// <returns>Язык, на котором написано имя (русский или английский).</returns>
-        /// <exception cref="ArgumentException">Выбрасывается, если имя пусто
+        /// <exception cref="FormatException">Выбрасывается, если имя пусто
         /// или содержит только пробелы.</exception>
         public static Language DetectLanguage(string name)
         {
             if (string.IsNullOrWhiteSpace(name))
             {
-                throw new ArgumentException(
+                throw new FormatException(
                     "Имя не должно быть пустым" +
                     " или содержать только пробелы.");
             }

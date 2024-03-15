@@ -83,7 +83,7 @@ namespace PersonListLab
         /// <param name="personList">Список персон.</param>
         private static void PrintList(PersonList personList)
         {
-            string listInfo = personList.GetListInfo();
+            string listInfo = personList.GetInfo();
             Console.WriteLine(listInfo);
         }
 
@@ -91,9 +91,9 @@ namespace PersonListLab
         /// Выводит в консоль длину списка персон.
         /// </summary>
         /// <param name="personList">Список персон.</param>
-        public static void PrintListLength(PersonList personList)
+        public static void PrintLength(PersonList personList)
         {
-            Console.WriteLine($"Длина списка: {personList.GetListLength()}");
+            Console.WriteLine($"Длина списка: {personList.GetLength()}");
         }
 
         /// <summary>
@@ -188,7 +188,7 @@ namespace PersonListLab
             Console.WriteLine("Шаг 4: Удаление второго человека" +
                 " из первого списка \n");
 
-            firstList.ClearListByIndex(index);
+            firstList.ClearByIndex(index);
 
             PrintList(firstList);
             PrintList(secondList);
@@ -205,15 +205,15 @@ namespace PersonListLab
 
             Console.ReadKey();
 
-            Person randomPerson = Person.GetRandomPerson();
-            string randomPersonInfo = randomPerson.GetPersonInfo();
+            Person randomPerson = Person.GetRandom();
+            string randomPersonInfo = randomPerson.GetInfo();
             PrintPerson(randomPersonInfo);
 
             Console.ReadKey();
 
             Person personFromConsole = ReadPersonFromConsole();
             string personFromConsoleInfo = 
-                personFromConsole?.GetPersonInfo()
+                personFromConsole?.GetInfo()
                     ?? "Ввод отменен.";
 
             PrintPerson(personFromConsoleInfo);

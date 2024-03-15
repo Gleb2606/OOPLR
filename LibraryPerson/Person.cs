@@ -56,7 +56,6 @@ namespace PersonListLibrary
         public Person(string firstName, string lastName, 
             int age, Gender gender)
         {
-            //TODO: remove +
             FirstName = firstName;
             LastName = lastName;
             Age = age;
@@ -111,10 +110,8 @@ namespace PersonListLibrary
             get { return _age; }
             set
             {
-                //TODO: duplication +
                 if (value < _minAge || value > _maxAge)
                 {
-                    //TODO: duplication +
                     throw new ArgumentException($"Возраст должен находится "+
                         $"в пределах от {_minAge} до {_maxAge}");
                 }
@@ -127,6 +124,7 @@ namespace PersonListLibrary
         /// </summary>
         public Gender Gender { get; set; }
 
+        //TODO: rename
         /// <summary>
         /// Возвращает строковое представление информации о человеке.
         /// </summary>
@@ -163,7 +161,6 @@ namespace PersonListLibrary
             };
 
             string firstName, lastName;
-            //TODO: duplication +
             int age = random.Next(_minAge, _maxAge);
             Gender gender = (Gender)random.Next(0, 2);
 
@@ -193,11 +190,9 @@ namespace PersonListLibrary
             {
                 if (char.IsLetter(character))
                 {
-                    //TODO: duplication +
                     if ((character >= 'а' && character <= 'я') ||
                         (character >= 'А' && character <= 'Я'))
                     {
-                        //TODO: {} +
                         if (hasEnglishLetters)
                         {
                             return false;
@@ -208,7 +203,6 @@ namespace PersonListLibrary
                     else if ((character >= 'a' && character <= 'z') ||
                         (character >= 'A' && character <= 'Z'))
                     {
-                        //TODO: {} +
                         if (hasRussianLetters)
                         {
                             return false;
@@ -217,7 +211,6 @@ namespace PersonListLibrary
                         hasEnglishLetters = true;
                     }
                 }
-                //TODO: {} +
                 else if (character != ' ' && character != '-')
                 {
                     return false;
@@ -244,9 +237,10 @@ namespace PersonListLibrary
                     " или содержать только пробелы.");
             }
 
-            return name.Any(c => char.IsLetter(c) &&
-                ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))) ?
-                Language.English : Language.Russian;
+            return name.Any(c => char.IsLetter(c) 
+              && ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))) 
+                ? Language.English 
+                : Language.Russian;
         }
 
         /// <summary>
@@ -263,12 +257,15 @@ namespace PersonListLibrary
             Language nameLanguage = DetectLanguage(name);
 
             return lastName.All(c =>
-                char.IsLetter(c) && (
-                    (nameLanguage == Language.Russian && ((c >= 'а' && c <= 'я') ||
-                    (c >= 'А' && c <= 'Я'))) ||
-                    (nameLanguage == Language.English && ((c >= 'a' && c <= 'z') ||
-                    (c >= 'A' && c <= 'Z'))))
-                || c == ' ' || c == '-');
+                char.IsLetter(c) 
+                && ((nameLanguage == Language.Russian 
+                    && ((c >= 'а' && c <= 'я') 
+                        || (c >= 'А' && c <= 'Я'))) 
+                    || (nameLanguage == Language.English 
+                        && ((c >= 'a' && c <= 'z') 
+                            || (c >= 'A' && c <= 'Z'))))
+                || c == ' ' 
+                || c == '-');
         }
 
         /// <summary>

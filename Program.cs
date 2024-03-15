@@ -28,31 +28,23 @@ namespace PersonListLab
         {
             Person person = new Person();
 
-            //TODO: remove+
-
-            //TODO: duplication+
-
             List<Action> actions = new List<Action>()
             {
-                //TODO: duplication +
                 () =>
                 {
                      Console.Write("Введите имя: ");
                      person.FirstName = Console.ReadLine();
                 },
-                //TODO: duplication +
                 () =>
                 {
                      Console.Write("Введите фамилию: ");
                      person.LastName = Console.ReadLine();
                 },
-                //TODO: duplication +
                 () =>
                 {
                      Console.Write("Введите возраст: ");
                      person.Age = Convert.ToInt32(Console.ReadLine());
                 },
-                //TODO: duplication +
                 () =>
                 {
                      Console.Write("Введите пол " +
@@ -132,11 +124,11 @@ namespace PersonListLab
             }
         }
 
-            /// <summary>
-            /// Главный метод программы.
-            /// </summary>
-            /// <param name="args">Аргументы командной строки.</param>
-            private static void Main(string[] args)
+        /// <summary>
+        /// Главный метод программы.
+        /// </summary>
+        /// <param name="args">Аргументы командной строки.</param>
+        private static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Green;
 
@@ -195,7 +187,6 @@ namespace PersonListLab
 
             Console.WriteLine("Шаг 4: Удаление второго человека" +
                 " из первого списка \n");
-            //TODO: remove +
 
             firstList.ClearListByIndex(index);
 
@@ -222,7 +213,8 @@ namespace PersonListLab
 
             Person personFromConsole = ReadPersonFromConsole();
             string personFromConsoleInfo = 
-                personFromConsole?.GetPersonInfo()?? "Ввод отменен.";
+                personFromConsole?.GetPersonInfo()
+                    ?? "Ввод отменен.";
 
             PrintPerson(personFromConsoleInfo);
 

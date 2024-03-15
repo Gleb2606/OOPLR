@@ -36,8 +36,8 @@ namespace PersonListLibrary
         }
 
         /// <summary>
-        /// //TODO: RSDN +
-        /// Инициализирует новый экземпляр класса PersonList с указанным списком персон и именем списка.
+        /// Инициализирует новый экземпляр класса PersonList 
+        /// с указанным списком персон и именем списка.
         /// </summary>
         /// <param name="listPerson">Список персон.</param>
         /// <param name="nameListPerson">Имя списка персон.</param>
@@ -139,6 +139,7 @@ namespace PersonListLibrary
             return -1; 
         }
 
+        //TODO: rename
         /// <summary>
         /// Возвращает строковое представление информации о списке персон.
         /// </summary>
@@ -152,6 +153,7 @@ namespace PersonListLibrary
             foreach (var person in _listPerson)
             {
                 stringBuilder.AppendLine
+                    //TODO: duplication
                     ($"{person.LastName} {person.FirstName}," +
                     $" возраст: {person.Age}," +
                     $" пол: {person.Gender}");

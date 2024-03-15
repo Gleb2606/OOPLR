@@ -1,5 +1,4 @@
-﻿
-namespace PersonListLibrary
+﻿namespace PersonListLibrary
 {
     /// <summary>
     /// Перечисление, содержащее возможный пол человека.

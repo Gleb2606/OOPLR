@@ -219,6 +219,12 @@ namespace PersonListLab
             PrintPerson(personFromConsoleInfo);
 
             Console.ReadKey();
+
+            Child baby = new Child("бэби", "бэбс", 24, Gender.Male, null, null, "ТПУ");
+            string babyInfo = baby.GetInfo();
+            Console.WriteLine(babyInfo);
+
+            Console.ReadKey();
         }
     }
 }

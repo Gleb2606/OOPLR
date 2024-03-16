@@ -129,7 +129,7 @@ namespace PersonListLibrary
         /// Возвращает строковое представление информации о человеке.
         /// </summary>
         /// <returns>Строковое представление информации о человеке.</returns>
-        public string GetInfo()
+        public virtual string GetInfo()
         {
             return $"{FirstName} {LastName}, возраст: {Age}, пол: {Gender}";
         }

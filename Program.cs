@@ -132,18 +132,35 @@ namespace PersonListLab
         {
             Console.ForegroundColor = ConsoleColor.Green;
 
-            Console.WriteLine(RandomPerson.GetRandomPerson().GetInfo());
-            Console.WriteLine(RandomPerson.GetRandomPerson().GetInfo());
+            PersonList personList = new PersonList("Список взрослых и детей");
 
-            Console.ReadKey();
+            Random random = new Random();
+            int numAdults = random.Next(3, 7);
+            int numChildren = random.Next(3, 7);
 
-            Console.WriteLine(RandomPerson.GetRandomAdult().GetInfo());
-            Console.WriteLine(RandomPerson.GetRandomAdult().GetInfo());
+            for (int i = 0; i < numAdults; i++)
+            {
+                personList.AddPersonToList(RandomPerson.GetRandomAdult());
+            }
 
-            Console.ReadKey();
+            for (int i = 0; i < numChildren; i++)
+            {
+                personList.AddPersonToList(RandomPerson.GetRandomChild());
+            }
 
-            Console.WriteLine(RandomPerson.GetRandomChild().GetInfo());
-            Console.WriteLine(RandomPerson.GetRandomChild().GetInfo());
+            Console.WriteLine(personList.GetInfo());
+
+            var fourthPerson = personList.GetElementByIndex(3);
+            if (fourthPerson is Adult)
+            {
+                Console.WriteLine("Четвертый человек в списке - взрослый");
+                Console.WriteLine(fourthPerson.GetInfo());
+            }
+            else if (fourthPerson is Child)
+            {
+                Console.WriteLine("Четвертый человек в списке - ребёнок");
+                Console.WriteLine(fourthPerson.GetInfo());
+            }
 
             Console.ReadKey();
         }

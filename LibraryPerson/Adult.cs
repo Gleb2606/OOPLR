@@ -64,10 +64,15 @@ namespace PersonListLibrary
         public string Job { get; set; }
 
         /// <summary>
+        /// Свойство для поля минимальный возраст.
+        /// </summary>
+        public override int MinAge { get; } = 19;
+
+        /// <summary>
         /// конструктор по умолчанию
         /// </summary>
-        public Adult() : this("Неизвестно", "Неизвестно", 0, Gender.Male,
-                               0, 0, null, "Неизвестно")
+        public Adult() : this("Неизвестно", "Неизвестно", 19, Gender.Male,
+                               0, 0, null, null)
         { }
 
         /// <summary>
@@ -99,8 +104,17 @@ namespace PersonListLibrary
         /// <returns>Информация о Взрослом человеке.</returns>
         public override string GetInfo()
         {
-            string info = $"{base.GetInfo()}, Место работы: {Job}," +
+            string info = $"{base.GetInfo()}," +
                 $" Данные паспорта: {PassportSeries} {PassportNumber}, ";
+
+            if (Job == null)
+            {
+                info += $"Место работы: безработный, ";
+            }
+            else
+            {
+                info += $"Место работы: {Job}, ";
+            }
 
             if (Partner == null)
             {

@@ -30,16 +30,6 @@ namespace PersonListLibrary
         private Gender _gender;
 
         /// <summary>
-        /// Константа хранит минимальный возраст.
-        /// </summary>
-        public const int _minAge = 0;
-
-        /// <summary>
-        /// Константа хранит максимальный возраст.
-        /// </summary>
-        public const int _maxAge = 120;
-
-        /// <summary>
         /// Конструктор по умолчанию.
         /// </summary>
         public Person() : this("Неизвестно", "Неизвестно", 0, Gender.Male)
@@ -110,10 +100,10 @@ namespace PersonListLibrary
             get { return _age; }
             set
             {
-                if (value < _minAge || value > _maxAge)
+                if (value < MinAge || value > MaxAge)
                 {
                     throw new ArgumentException($"Возраст должен находится "+
-                        $"в пределах от {_minAge} до {_maxAge}");
+                        $"в пределах от {MinAge} до {MaxAge}");
                 }
                 _age = value;
             }
@@ -122,9 +112,18 @@ namespace PersonListLibrary
         /// <summary>
         /// Получает или устанавливает пол человека.
         /// </summary>
-        public Gender Gender { get; set; }
+        public Gender Gender { get; set; } 
 
-        //TODO: rename
+        /// <summary>
+        /// Максимальный возраст человека.
+        /// </summary>
+        public virtual int MaxAge { get; } = 120;
+
+        /// <summary>
+        /// Минимальный возраст человека.
+        /// </summary>
+        public virtual int MinAge { get; }
+
         /// <summary>
         /// Возвращает строковое представление информации о человеке.
         /// </summary>

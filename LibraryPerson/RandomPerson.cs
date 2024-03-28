@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace PersonListLibrary
 {
+    /// <summary>
+    /// Класс рандомного создания Людей.
+    /// </summary>
     public static class RandomPerson
     {
         /// <summary>
         /// Возвращает случайного человека с случайными параметрами.
         /// </summary>
-        /// <returns>Случайный человек.</returns>
+        /// <param name="person">Человек, для которого устанавливаются параметры.</param>
         public static void SetRandomPerson(Person person)
         {
             Random random = new Random(Guid.NewGuid().GetHashCode());
@@ -19,22 +22,22 @@ namespace PersonListLibrary
             List<string> maleNames = new List<string>()
             {
                 "Густав", "Николай", "Иоганн", "Адам", "Теодор",
-                "Мустафа-Кемаль", "Джон", "Билли", "Марио", "Хавьер"
+                "Мустафа-Кемаль", "Джон", "Билли", "Пол", "Владимир"
             };
 
             List<string> femaleNames = new List<string>()
             {
                 "Ева", "Оксана", "Маргарита", "Анастасия", "Эдит",
-                "Латифе", "Юлия", "Татьяна", "Констанция", "Карина"
+                "Латифе", "Юлия", "Татьяна", "Констанция", "Джессика"
             };
 
             List<string> lastNames = new List<string>()
             {
                 "Майринк", "Гоголь", "Гете", "Сэндлер", "Рузвельт",
-                "Ататюрк", "Сильвер", "Бонс", "Пьюзо", "Милей"
+                "Ататюрк", "Сильвер", "Бонс", "Атрейдес", "Харконнен"
             };
 
-            person.Age = random.Next(Person._minAge, Person._maxAge);
+            person.Age = random.Next(person.MinAge, person.MaxAge);
             person.Gender = (Gender)random.Next(0, 2);
 
             switch (person.Gender)
@@ -66,7 +69,7 @@ namespace PersonListLibrary
         /// <summary>
         /// Возвращает случайного взрослого с случайными параметрами.
         /// </summary>
-        /// <returns>Случайный человек.</returns>
+        /// <param name="adult">Взрослый, для которого устанавливаются параметры.</param>
         public static void SetRandomAdult(Adult adult)
         {
             Random random = new Random(Guid.NewGuid().GetHashCode());
@@ -77,7 +80,11 @@ namespace PersonListLibrary
                 "Арселор Миттал", "Скат", "Turkish airlines", "НТЦ ЕЭС", "IEEE"
             };
 
-            adult.Job = jobs[random.Next(0, jobs.Count)];
+            adult.Age = random.Next(adult.MinAge, adult.MaxAge);
+            if (random.Next(0, 2) == 0) 
+            {
+                adult.Job = jobs[random.Next(0, jobs.Count)];
+            } 
             adult.PassportSeries = random.Next(1111, 9999);
             adult.PassportNumber = random.Next(111111, 999999);
         }
@@ -98,7 +105,7 @@ namespace PersonListLibrary
         /// <summary>
         /// Возвращает случайного ребенка с случайными параметрами.
         /// </summary>
-        /// <returns>Случайный ребенка.</returns>
+        /// <param name="child">ребенок, для которого устанавливаются параметры.</param>
         public static void SetRandomChild(Child child)
         {
             Random random = new Random(Guid.NewGuid().GetHashCode());
@@ -109,8 +116,29 @@ namespace PersonListLibrary
             };
 
             child.Educational = educationals[random.Next(0, educationals.Count)];
-            child.Father = GetRandomAdult();
-            child.Mother = GetRandomAdult();
+            if (random.Next(0, 2) == 0)
+            {
+                Adult father = GetRandomAdult();
+
+                while (father.Gender != Gender.Male)
+                {
+                    father = GetRandomAdult();
+                }
+
+                child.Father = father;
+            }
+
+            if (random.Next(0, 2) == 0)
+            {
+                Adult mother = GetRandomAdult();
+
+                while (mother.Gender != Gender.Female)
+                {
+                    mother = GetRandomAdult();
+                }
+
+                child.Mother = mother;
+            }
         }
 
         /// <summary>
@@ -128,12 +156,23 @@ namespace PersonListLibrary
         /// <summary>
         /// Возвращает случайного человека с случайными параметрами.
         /// </summary>
-        /// <returns>Случайный взрослый.</returns>
+        /// <param name="adult">Взрослый, для которого устанавливается партнер.</param>
         public static void SetRandomPartner(Adult adult)
         {
-            Adult partner = new Adult();
-            SetRandomPerson(partner);
-            adult.Partner = partner;
+            Random random = new Random(Guid.NewGuid().GetHashCode());
+
+            Gender partnerGender = (adult.Gender == Gender.Male) ? Gender.Female : Gender.Male;
+
+            if (random.Next(0, 2) == 0)
+            {
+                Adult partner = GetRandomAdult();
+                while (partner.Gender != partnerGender)
+                {
+                    partner = GetRandomAdult();
+                }
+
+                adult.Partner = partner;
+            }
         }
     }
 }

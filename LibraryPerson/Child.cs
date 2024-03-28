@@ -43,6 +43,11 @@ namespace PersonListLibrary
         public string Educational { get; set; }
 
         /// <summary>
+        /// Свойство для поля минимальный возраст.
+        /// </summary>
+        public override int MaxAge { get; } = 19;
+
+        /// <summary>
         /// конструктор по умолчанию
         /// </summary>
         public Child() : this("Неизвестно", "Неизвестно", 0, Gender.Male,
@@ -84,7 +89,7 @@ namespace PersonListLibrary
             }
             else
             {
-                info += "Мать: нет информации, ";
+                info += "Мать: нет, ";
             }
 
             if (Father != null)
@@ -93,7 +98,7 @@ namespace PersonListLibrary
             }
             else
             {
-                info += "Отец: нет информации";
+                info += "Отец: нет";
             }
 
             return info;

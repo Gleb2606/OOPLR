@@ -132,97 +132,18 @@ namespace PersonListLab
         {
             Console.ForegroundColor = ConsoleColor.Green;
 
-            Console.WriteLine("Шаг 1: Создание двух списков персон \n");
-
-            List<Person> personList1 = new List<Person>
-            {
-                new Person("Фауст", "Иоганн", 70, Gender.Male),
-                new Person("Пернат", "Атанасиус", 43, Gender.Male),
-                new Person("Крейн", "Иккабод", 31, Gender.Male)
-            };
-
-            List<Person> personList2 = new List<Person>
-            {
-                new Person("Ван-Тассел", "Катерина", 23, Gender.Female),
-                new Person("Циглер", "Евгений", 24, Gender.Female),
-                new Person("Рожникова", "Татьяна", 22, Gender.Female)
-            };
-
-            PersonList firstList = 
-                new PersonList(personList1, "Первый список");
-
-            PersonList secondList = 
-                new PersonList(personList2, "Второй список");
-
-            Console.ReadKey();
-            Console.WriteLine("Вывод содержимого списков: \n");
-
-            PrintList(firstList);
-
-            PrintList(secondList);
+            Console.WriteLine(RandomPerson.GetRandomPerson().GetInfo());
+            Console.WriteLine(RandomPerson.GetRandomPerson().GetInfo());
 
             Console.ReadKey();
 
-            Console.WriteLine("Шаг 2: Добавление нового человека" +
-                " в первый список \n");
-
-            firstList.AddPersonToList(new Person("Жижка", 
-                "Ян", 64, Gender.Male));
-
-            PrintList(firstList);
+            Console.WriteLine(RandomPerson.GetRandomAdult().GetInfo());
+            Console.WriteLine(RandomPerson.GetRandomAdult().GetInfo());
 
             Console.ReadKey();
 
-            Console.WriteLine("Шаг 3: Копирование второго человека" +
-                " из первого списка в конец второго списка \n");
-            
-            int index = 1;
-
-            secondList.AddPersonToList(firstList.GetElementByIndex(index));
-
-            PrintList(firstList);
-            PrintList(secondList);
-
-            Console.ReadKey();
-
-            Console.WriteLine("Шаг 4: Удаление второго человека" +
-                " из первого списка \n");
-
-            firstList.ClearByIndex(index);
-
-            PrintList(firstList);
-            PrintList(secondList);
-
-            Console.ReadKey();
-
-            Console.WriteLine(" Шаг 5: Очистка второго списка\n");
-
-            secondList.ClearAll();
-
-            Console.WriteLine("\nСписки после очистки:");
-            PrintList(firstList);
-            PrintList(secondList);
-
-            Console.ReadKey();
-
-            Person randomPerson = Person.GetRandom();
-            string randomPersonInfo = randomPerson.GetInfo();
-            PrintPerson(randomPersonInfo);
-
-            Console.ReadKey();
-
-            Person personFromConsole = ReadPersonFromConsole();
-            string personFromConsoleInfo = 
-                personFromConsole?.GetInfo()
-                    ?? "Ввод отменен.";
-
-            PrintPerson(personFromConsoleInfo);
-
-            Console.ReadKey();
-
-            Child baby = new Child("бэби", "бэбс", 24, Gender.Male, null, null, "ТПУ");
-            string babyInfo = baby.GetInfo();
-            Console.WriteLine(babyInfo);
+            Console.WriteLine(RandomPerson.GetRandomChild().GetInfo());
+            Console.WriteLine(RandomPerson.GetRandomChild().GetInfo());
 
             Console.ReadKey();
         }

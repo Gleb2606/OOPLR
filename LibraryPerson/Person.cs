@@ -32,12 +32,12 @@ namespace PersonListLibrary
         /// <summary>
         /// Константа хранит минимальный возраст.
         /// </summary>
-        private const int _minAge = 0;
+        public const int _minAge = 0;
 
         /// <summary>
         /// Константа хранит максимальный возраст.
         /// </summary>
-        private const int _maxAge = 120;
+        public const int _maxAge = 120;
 
         /// <summary>
         /// Конструктор по умолчанию.
@@ -132,45 +132,6 @@ namespace PersonListLibrary
         public virtual string GetInfo()
         {
             return $"{FirstName} {LastName}, возраст: {Age}, пол: {Gender}";
-        }
-
-        /// <summary>
-        /// Возвращает случайного человека с случайными параметрами.
-        /// </summary>
-        /// <returns>Случайный человек.</returns>
-        public static Person GetRandom()
-        {
-            Random random = new Random();
-
-            List<string> maleNames = new List<string>()
-            {
-                "Густав", "Николай", "Иоганн", "Адам", "Теодор",
-                "Мустафа-Кемаль", "Джон", "Билли", "Марио", "Хавьер"
-            };
-
-            List<string> femaleNames = new List<string>()
-            {
-                "Ева", "Оксана", "Маргарита", "Анастасия", "Эдит",
-                "Латифе", "Юлия", "Татьяна", "Констанция", "Карина"
-            };
-
-            List<string> lastNames = new List<string>()
-            {
-                "Майринк", "Гоголь", "Гёте", "Сэндлер", "Рузвельт",
-                "Ататюрк", "Сильвер", "Бонс", "Пьюзо", "Милей"
-            };
-
-            string firstName, lastName;
-            int age = random.Next(_minAge, _maxAge);
-            Gender gender = (Gender)random.Next(0, 2);
-
-            firstName = gender == Gender.Male 
-                ? maleNames[random.Next(0, maleNames.Count)] 
-                : femaleNames[random.Next(0, femaleNames.Count)];
-
-            lastName = lastNames[random.Next(0, lastNames.Count)];
-
-            return new Person(firstName, lastName, age, gender);
         }
 
         /// <summary>

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PersonListLibrary;
 
-namespace PersonListLab
+namespace PersonListLibrary
 {
     /// <summary>
     /// Дочерний класс Child (суперкласс Person).

@@ -161,7 +161,9 @@ namespace PersonListLibrary
         {
             Random random = new Random(Guid.NewGuid().GetHashCode());
 
-            Gender partnerGender = (adult.Gender == Gender.Male) ? Gender.Female : Gender.Male;
+            Gender partnerGender = (adult.Gender == Gender.Male) 
+                ? Gender.Female 
+                : Gender.Male;
 
             if (random.Next(0, 2) == 0)
             {

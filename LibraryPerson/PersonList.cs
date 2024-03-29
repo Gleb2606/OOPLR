@@ -132,7 +132,6 @@ namespace PersonListLibrary
             return -1; 
         }
 
-        //TODO: rename
         /// <summary>
         /// Возвращает строковое представление информации о списке персон.
         /// </summary>
@@ -146,7 +145,6 @@ namespace PersonListLibrary
             foreach (var person in _listPerson)
             {
                 stringBuilder.AppendLine(person.GetInfo());
-                //TODO: duplication +
             }
 
             stringBuilder.AppendLine("");

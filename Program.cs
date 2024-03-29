@@ -151,6 +151,7 @@ namespace PersonListLab
             Console.WriteLine(personList.GetInfo());
 
             var fourthPerson = personList.GetElementByIndex(3);
+            //TODO: вызвать заданный только в наследнике метод
             if (fourthPerson is Adult)
             {
                 Console.WriteLine("Четвертый человек в списке - взрослый");

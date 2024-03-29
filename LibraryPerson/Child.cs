@@ -12,16 +12,19 @@ namespace PersonListLibrary
     /// </summary>
     public class Child : Person
     {
+        //TODO: remove
         /// <summary>
         /// Поле отца.
         /// </summary>
         private Adult _father;
 
+        //TODO: remove
         /// <summary>
         /// Поле матери.
         /// </summary>
         private Adult _mother;
 
+        //TODO: remove
         /// <summary>
         /// Поле места обучения.
         /// </summary>
@@ -37,6 +40,7 @@ namespace PersonListLibrary
         /// </summary>
         public Adult Mother { get; set; }
 
+        //TODO: validation
         /// <summary>
         /// свойство для места обучения
         /// </summary>
@@ -85,6 +89,7 @@ namespace PersonListLibrary
 
             if (Mother != null)
             {
+                //TODO: duplication
                 info += $"Мать: {Mother.LastName} " + $"{Mother.FirstName}, ";
             }
             else
@@ -94,6 +99,7 @@ namespace PersonListLibrary
 
             if (Father != null)
             {
+                //TODO: duplication
                 info += $"Отец: {Father.LastName} " + $"{Father.FirstName}, ";
             }
             else

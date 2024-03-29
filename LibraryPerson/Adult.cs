@@ -27,16 +27,19 @@ namespace PersonListLibrary
         /// </summary>
         private Adult _partner;
 
+        //TODO: remove
         /// <summary>
         /// поле мест работы
         /// </summary>
         private string _job;
-
+        
+        //TODO: validation
         /// <summary>
         /// свойство для серии паспорта
         /// </summary>
         public int PassportSeries { get; set; }
-
+        
+        //TODO: validation
         /// <summary>
         /// свойство для номера паспорта
         /// </summary>

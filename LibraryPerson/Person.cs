@@ -124,7 +124,6 @@ namespace PersonListLibrary
         /// </summary>
         public Gender Gender { get; set; }
 
-        //TODO: rename
         /// <summary>
         /// Возвращает строковое представление информации о человеке.
         /// </summary>

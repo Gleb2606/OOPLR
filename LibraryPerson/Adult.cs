@@ -27,23 +27,59 @@ namespace PersonListLibrary
         /// </summary>
         private Adult _partner;
 
-        //TODO: remove
-        /// <summary>
-        /// поле мест работы
-        /// </summary>
-        private string _job;
+        //TODO: remove +
         
-        //TODO: validation
+        //TODO: validation + 
         /// <summary>
         /// свойство для серии паспорта
         /// </summary>
-        public int PassportSeries { get; set; }
+        public int PassportSeries 
+        {
+            get
+            {
+                return _passportSeries;
+            }
+
+            set
+            {
+                string series = value.ToString();
+                if (series.Length != 4)
+                {
+                    throw new ArgumentOutOfRangeException
+                        ("Серия паспорта должна содержать 4 цифры");
+                }
+                else
+                {
+                    _passportSeries = value;
+                }
+            }
+        }
         
-        //TODO: validation
+        //TODO: validation +
         /// <summary>
         /// свойство для номера паспорта
         /// </summary>
-        public int PassportNumber { get; set;}
+        public int PassportNumber 
+        {
+            get
+            {
+                return _passportSeries;
+            }
+
+            set
+            {
+                string series = value.ToString();
+                if (series.Length != 6)
+                {
+                    throw new ArgumentOutOfRangeException
+                        ("Номер паспорта должен содержать 6 цифр");
+                }
+                else
+                {
+                    _passportSeries = value;
+                }
+            }
+        }
 
         /// <summary>
         /// свойство для партнера
@@ -75,7 +111,7 @@ namespace PersonListLibrary
         /// конструктор по умолчанию
         /// </summary>
         public Adult() : this("Неизвестно", "Неизвестно", 19, Gender.Male,
-                               0, 0, null, null)
+                               1111, 111111, null, null)
         { }
 
         /// <summary>
@@ -129,6 +165,14 @@ namespace PersonListLibrary
             }
 
             return info;
+        }
+
+        /// <summary>
+        /// Метод верификации объекта Adult.
+        /// </summary>
+        public void AdultVerify()
+        {
+            Console.WriteLine("4-ый объект является взрослым");
         }
     }
 }

@@ -61,7 +61,8 @@ namespace PersonListLibrary
         /// <returns>Случайный взрослый.</returns>
         public static Person GetRandomPerson()
         {
-            Person person = new Person();
+            Random random = new Random();
+            Person person = new Adult();
             SetRandomPerson(person);
             return person;
         }

@@ -4,11 +4,11 @@ using System.Linq;
 
 namespace PersonListLibrary
 {
-    //TODO: abstract
+    //TODO: abstract +
     /// <summary>
     /// Класс, представляющий человека.
     /// </summary>
-    public class Person
+    public abstract class Person
     {
         /// <summary>
         /// Поле имени человека.
@@ -25,11 +25,7 @@ namespace PersonListLibrary
         /// </summary>
         private int _age;
 
-        //TODO: remove
-        /// <summary>
-        /// Поле пола человека.
-        /// </summary>
-        private Gender _gender;
+        //TODO: remove +
 
         /// <summary>
         /// Конструктор по умолчанию.

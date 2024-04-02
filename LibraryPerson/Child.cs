@@ -12,19 +12,7 @@ namespace PersonListLibrary
     /// </summary>
     public class Child : Person
     {
-        //TODO: remove
-        /// <summary>
-        /// Поле отца.
-        /// </summary>
-        private Adult _father;
 
-        //TODO: remove
-        /// <summary>
-        /// Поле матери.
-        /// </summary>
-        private Adult _mother;
-
-        //TODO: remove
         /// <summary>
         /// Поле места обучения.
         /// </summary>
@@ -40,11 +28,30 @@ namespace PersonListLibrary
         /// </summary>
         public Adult Mother { get; set; }
 
-        //TODO: validation
+        //TODO: validation +
         /// <summary>
         /// свойство для места обучения
         /// </summary>
-        public string Educational { get; set; }
+        public string Educational 
+        {
+            get
+            {
+                return _educational;
+            }
+
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new NullReferenceException
+                        ("Введена пустая строка");
+                }
+                else
+                {
+                    _educational = value;
+                }
+            }
+        }
 
         /// <summary>
         /// Свойство для поля минимальный возраст.
@@ -85,29 +92,30 @@ namespace PersonListLibrary
         /// <returns>Информация о Ребенке.</returns>
         public override string GetInfo()
         {
-            string info = $"{base.GetInfo()}, Место учебы: {Educational}, ";
-
-            if (Mother != null)
-            {
-                //TODO: duplication
-                info += $"Мать: {Mother.LastName} " + $"{Mother.FirstName}, ";
-            }
-            else
-            {
-                info += "Мать: нет, ";
-            }
-
+            string father = "Нет отца";
+            string mother = "Нет матери";
             if (Father != null)
             {
-                //TODO: duplication
-                info += $"Отец: {Father.LastName} " + $"{Father.FirstName}, ";
+                father = Father.FirstName + " " + Father.LastName;
             }
-            else
+            if (Mother != null)
             {
-                info += "Отец: нет";
+                mother = Mother.FirstName + " " + Mother.LastName;
             }
 
-            return info;
+            return base.GetInfo() + $", Отец: {father}, Мать: {mother}, Школа: {Educational}";
+
+            //TODO: duplication +
+
+            //TODO: duplication +
+        }
+
+        /// <summary>
+        /// Метод верификации объекта Child.
+        /// </summary>
+        public void ChildVerify() 
+        {
+            Console.WriteLine("4-ый объект является ребёнком");
         }
     }
 }

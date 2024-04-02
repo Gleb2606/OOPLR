@@ -26,7 +26,7 @@ namespace PersonListLab
         /// представляющий введенного человека.</returns>
         private static Person ReadPersonFromConsole()
         {
-            Person person = new Person();
+            Person person = new Adult();
 
             List<Action> actions = new List<Action>()
             {
@@ -151,16 +151,14 @@ namespace PersonListLab
             Console.WriteLine(personList.GetInfo());
 
             var fourthPerson = personList.GetElementByIndex(3);
-            //TODO: вызвать заданный только в наследнике метод
-            if (fourthPerson is Adult)
+            //TODO: вызвать заданный только в наследнике метод + 
+            if (fourthPerson is Adult adult)
             {
-                Console.WriteLine("Четвертый человек в списке - взрослый");
-                Console.WriteLine(fourthPerson.GetInfo());
+                adult.AdultVerify();
             }
-            else if (fourthPerson is Child)
+            else if (fourthPerson is Child child)
             {
-                Console.WriteLine("Четвертый человек в списке - ребёнок");
-                Console.WriteLine(fourthPerson.GetInfo());
+               child.ChildVerify();
             }
 
             Console.ReadKey();

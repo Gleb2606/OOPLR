@@ -4,11 +4,11 @@ using System.Linq;
 
 namespace PersonListLibrary
 {
-    //TODO: RSDN
+    //TODO: RSDN +
     /// <summary>
     /// Класс, представляющий человека.
     /// </summary>
-    public abstract class Person
+    public abstract class PersonBase
     {
         /// <summary>
         /// Поле имени человека.
@@ -28,7 +28,7 @@ namespace PersonListLibrary
         /// <summary>
         /// Конструктор по умолчанию.
         /// </summary>
-        public Person() : this("Неизвестно", "Неизвестно", 0, Gender.Male)
+        public PersonBase() : this("Неизвестно", "Неизвестно", 0, Gender.Male)
         { }
 
         /// <summary>
@@ -39,7 +39,7 @@ namespace PersonListLibrary
         /// <param name="lastName">Фамилия человека.</param>
         /// <param name="age">Возраст человека.</param>
         /// <param name="gender">Пол человека.</param>
-        public Person(string firstName, string lastName, 
+        public PersonBase(string firstName, string lastName, 
             int age, Gender gender)
         {
             FirstName = firstName;

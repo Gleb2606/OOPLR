@@ -15,7 +15,7 @@ namespace PersonListLibrary
         /// Возвращает случайного человека с случайными параметрами.
         /// </summary>
         /// <param name="person">Человек, для которого устанавливаются параметры.</param>
-        public static void SetRandomPerson(Person person)
+        public static void SetRandomPerson(PersonBase person)
         {
             Random random = new Random(Guid.NewGuid().GetHashCode());
 
@@ -59,10 +59,10 @@ namespace PersonListLibrary
         /// Возвращает случайного человека с случайными параметрами.
         /// </summary>
         /// <returns>Случайный взрослый.</returns>
-        public static Person GetRandomPerson()
+        public static PersonBase GetRandomPerson()
         {
             Random random = new Random();
-            Person person = new Adult();
+            PersonBase person = new Adult();
             SetRandomPerson(person);
             return person;
         }
@@ -120,7 +120,7 @@ namespace PersonListLibrary
             if (random.Next(0, 2) == 0)
             {
                 Adult father = GetRandomAdult();
-                //TODO: 
+
                 while (father.Gender != Gender.Male)
                 {
                     father = GetRandomAdult();
@@ -132,7 +132,7 @@ namespace PersonListLibrary
             if (random.Next(0, 2) == 0)
             {
                 Adult mother = GetRandomAdult();
-                //TODO: 
+
                 while (mother.Gender != Gender.Female)
                 {
                     mother = GetRandomAdult();
@@ -168,7 +168,6 @@ namespace PersonListLibrary
 
             if (random.Next(0, 2) == 0)
             {
-                //TODO: 
                 Adult partner = GetRandomAdult();
                 while (partner.Gender != partnerGender)
                 {

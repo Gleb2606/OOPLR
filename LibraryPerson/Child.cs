@@ -10,7 +10,7 @@ namespace PersonListLibrary
     /// <summary>
     /// Дочерний класс Child (суперкласс Person).
     /// </summary>
-    public class Child : Person
+    public class Child : PersonBase
     {
         /// <summary>
         /// Поле места обучения.
@@ -108,9 +108,9 @@ namespace PersonListLibrary
         /// <summary>
         /// Метод верификации объекта Child.
         /// </summary>
-        public string ChildVerify() 
+        public string ChildGreetings() 
         {
-            return ("4-ый объект является ребёнком");
+            return ($"Привет, {FirstName}");
         }
     }
 }

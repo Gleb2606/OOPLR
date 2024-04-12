@@ -10,7 +10,7 @@ namespace PersonListLibrary
     /// <summary>
     /// Дочерний класс Adult (суперкласс Person).
     /// </summary>
-    public class Adult : Person
+    public class Adult : PersonBase
     {
         /// <summary>
         /// поле серии паспорта
@@ -101,12 +101,12 @@ namespace PersonListLibrary
         /// <summary>
         /// Свойство для поля минимальный возраст.
         /// </summary>
-        public override int MinAge { get; } = 19;
+        public override int MinAge { get; } = 18;
 
         /// <summary>
         /// конструктор по умолчанию
         /// </summary>
-        public Adult() : this("Неизвестно", "Неизвестно", 19, Gender.Male,
+        public Adult() : this("Неизвестно", "Неизвестно", 18, Gender.Male,
                                1111, 111111, null, null)
         { }
 
@@ -167,9 +167,9 @@ namespace PersonListLibrary
         /// <summary>
         /// Метод верификации объекта Adult.
         /// </summary>
-        public string AdultVerify()
+        public string CitizenGreetings()
         {
-            return("4-ый объект является взрослым");
+            return($"Здравствуйте, гражданин {LastName}");
         }
     }
 }

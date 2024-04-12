@@ -13,7 +13,7 @@ namespace PersonListLibrary
         /// <summary>
         /// Поле список персон.
         /// </summary>
-        private List<Person> _listPerson;
+        private List<PersonBase> _listPerson;
 
         /// <summary>
         /// Поле список персон.
@@ -27,7 +27,7 @@ namespace PersonListLibrary
         public PersonList(string nameListPerson)
         {
             _nameListPerson = nameListPerson;
-            _listPerson = new List<Person>();
+            _listPerson = new List<PersonBase>();
         }
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace PersonListLibrary
         /// </summary>
         /// <param name="listPerson">Список персон.</param>
         /// <param name="nameListPerson">Имя списка персон.</param>
-        public PersonList(List<Person> listPerson, string nameListPerson)
+        public PersonList(List<PersonBase> listPerson, string nameListPerson)
         {
             _nameListPerson = nameListPerson;
             _listPerson = listPerson;
@@ -46,7 +46,7 @@ namespace PersonListLibrary
         /// Добавляет персону в список.
         /// </summary>
         /// <param name="person">Персона для добавления.</param>
-        public void AddPersonToList(Person person)
+        public void AddPersonToList(PersonBase person)
         {
             _listPerson.Add(person);
         }
@@ -55,7 +55,7 @@ namespace PersonListLibrary
         /// Удаляет персону из списка.
         /// </summary>
         /// <param name="person">Персона для удаления.</param>
-        public void RemovePersonFromList(Person person)
+        public void RemovePersonFromList(PersonBase person)
         {
             _listPerson.Remove(person);
         }
@@ -101,7 +101,7 @@ namespace PersonListLibrary
         /// </summary>
         /// <param name="index">Индекс персоны.</param>
         /// <returns>Персона по указанному индексу.</returns>
-        public Person GetElementByIndex(int index)
+        public PersonBase GetElementByIndex(int index)
         {
             if ((_listPerson.Count - 1) >= index && index >= 0)
             {
@@ -119,7 +119,7 @@ namespace PersonListLibrary
         /// </summary>
         /// <param name="person">Персона для поиска.</param>
         /// <returns>Индекс персоны в списке или -1, если не найдено.</returns>
-        public int GetIndexByElement(Person person)
+        public int GetIndexByElement(PersonBase person)
         {
             for (int i = 0; i <= (_listPerson.Count - 1); i++)
             {

@@ -170,9 +170,9 @@ namespace PersonListLibrary
         /// <summary>
         /// Метод верификации объекта Adult.
         /// </summary>
-        public void AdultVerify()
+        public string AdultVerify()
         {
-            Console.WriteLine("4-ый объект является взрослым");
+            return("4-ый объект является взрослым");
         }
     }
 }

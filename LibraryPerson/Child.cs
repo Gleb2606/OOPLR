@@ -113,9 +113,9 @@ namespace PersonListLibrary
         /// <summary>
         /// Метод верификации объекта Child.
         /// </summary>
-        public void ChildVerify() 
+        public string ChildVerify() 
         {
-            Console.WriteLine("4-ый объект является ребёнком");
+            return ("4-ый объект является ребёнком");
         }
     }
 }

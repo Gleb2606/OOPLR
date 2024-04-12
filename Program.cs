@@ -154,11 +154,13 @@ namespace PersonListLab
             //TODO: вызвать заданный только в наследнике метод + 
             if (fourthPerson is Adult adult)
             {
-                adult.AdultVerify();
+                string testPerson = adult.AdultVerify();
+                Console.WriteLine(testPerson);
             }
             else if (fourthPerson is Child child)
             {
-               child.ChildVerify();
+                string testPerson = child.ChildVerify();
+                Console.WriteLine(testPerson);
             }
 
             Console.ReadKey();

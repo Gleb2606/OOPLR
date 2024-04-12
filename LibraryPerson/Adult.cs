@@ -27,9 +27,6 @@ namespace PersonListLibrary
         /// </summary>
         private Adult _partner;
 
-        //TODO: remove +
-        
-        //TODO: validation + 
         /// <summary>
         /// свойство для серии паспорта
         /// </summary>
@@ -39,7 +36,6 @@ namespace PersonListLibrary
             {
                 return _passportSeries;
             }
-
             set
             {
                 string series = value.ToString();
@@ -167,6 +163,7 @@ namespace PersonListLibrary
             return info;
         }
 
+        //TODO:
         /// <summary>
         /// Метод верификации объекта Adult.
         /// </summary>

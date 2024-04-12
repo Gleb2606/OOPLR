@@ -151,7 +151,7 @@ namespace PersonListLab
             Console.WriteLine(personList.GetInfo());
 
             var fourthPerson = personList.GetElementByIndex(3);
-            //TODO: вызвать заданный только в наследнике метод + 
+            //TODO: вызвать заданный только в наследнике метод
             if (fourthPerson is Adult adult)
             {
                 string testPerson = adult.AdultVerify();

@@ -120,7 +120,7 @@ namespace PersonListLibrary
             if (random.Next(0, 2) == 0)
             {
                 Adult father = GetRandomAdult();
-
+                //TODO: 
                 while (father.Gender != Gender.Male)
                 {
                     father = GetRandomAdult();
@@ -132,7 +132,7 @@ namespace PersonListLibrary
             if (random.Next(0, 2) == 0)
             {
                 Adult mother = GetRandomAdult();
-
+                //TODO: 
                 while (mother.Gender != Gender.Female)
                 {
                     mother = GetRandomAdult();
@@ -168,6 +168,7 @@ namespace PersonListLibrary
 
             if (random.Next(0, 2) == 0)
             {
+                //TODO: 
                 Adult partner = GetRandomAdult();
                 while (partner.Gender != partnerGender)
                 {

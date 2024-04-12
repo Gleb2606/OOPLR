@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace PersonListLibrary
 {
-    //TODO: abstract +
+    //TODO: RSDN
     /// <summary>
     /// Класс, представляющий человека.
     /// </summary>
@@ -24,8 +24,6 @@ namespace PersonListLibrary
         /// Поле возраста человека.
         /// </summary>
         private int _age;
-
-        //TODO: remove +
 
         /// <summary>
         /// Конструктор по умолчанию.

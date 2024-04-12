@@ -12,7 +12,6 @@ namespace PersonListLibrary
     /// </summary>
     public class Child : Person
     {
-
         /// <summary>
         /// Поле места обучения.
         /// </summary>
@@ -28,7 +27,6 @@ namespace PersonListLibrary
         /// </summary>
         public Adult Mother { get; set; }
 
-        //TODO: validation +
         /// <summary>
         /// свойство для места обучения
         /// </summary>
@@ -104,12 +102,9 @@ namespace PersonListLibrary
             }
 
             return base.GetInfo() + $", Отец: {father}, Мать: {mother}, Школа: {Educational}";
-
-            //TODO: duplication +
-
-            //TODO: duplication +
         }
 
+        //TODO:
         /// <summary>
         /// Метод верификации объекта Child.
         /// </summary>

@@ -56,6 +56,58 @@ namespace PersonListLibrary
         }
 
         /// <summary>
+        /// Возвращает случайного человека с заданным полом.
+        /// </summary>
+        /// <param name="person">Человек, для которого устанавливаются параметры.</param>
+        public static void SetRandomPerson(PersonBase person, Gender gender)
+        {
+            Random random = new Random(Guid.NewGuid().GetHashCode());
+
+            List<string> maleNames = new List<string>()
+            {
+                "Густав", "Николай", "Иоганн", "Адам", "Теодор",
+                "Мустафа-Кемаль", "Джон", "Билли", "Пол", "Владимир"
+            };
+
+            List<string> femaleNames = new List<string>()
+            {
+                "Ева", "Оксана", "Маргарита", "Анастасия", "Эдит",
+                "Латифе", "Юлия", "Татьяна", "Констанция", "Джессика"
+            };
+
+            List<string> lastNames = new List<string>()
+            {
+                "Майринк", "Гоголь", "Гете", "Сэндлер", "Рузвельт",
+                "Ататюрк", "Сильвер", "Бонс", "Атрейдес", "Харконнен"
+            };
+
+            person.Age = random.Next(person.MinAge, person.MaxAge);
+
+            if(gender == Gender.Male) 
+            {
+                person.Gender = Gender.Male;
+            }
+            else 
+            {
+                person.Gender = Gender.Female;
+            }
+
+            switch (person.Gender)
+            {
+                case Gender.Male:
+                    person.FirstName = maleNames[random.Next(0, maleNames.Count)];
+                    break;
+
+                case Gender.Female:
+                    person.FirstName = femaleNames[random.Next(0, femaleNames.Count)];
+                    break;
+            }
+
+            person.LastName = lastNames[random.Next(0, lastNames.Count)];
+
+        }
+
+        /// <summary>
         /// Возвращает случайного человека с случайными параметрами.
         /// </summary>
         /// <returns>Случайный взрослый.</returns>
@@ -104,6 +156,18 @@ namespace PersonListLibrary
         }
 
         /// <summary>
+        /// Возвращает случайного взрослого с заданным полом.
+        /// </summary>
+        /// <returns>Случайный взрослый.</returns>
+        public static Adult GetRandomAdult(Gender gender)
+        {
+            Adult adult = new Adult();
+            SetRandomPerson(adult, gender);
+            SetRandomAdult(adult);
+            return adult;
+        }
+
+        /// <summary>
         /// Возвращает случайного ребенка с случайными параметрами.
         /// </summary>
         /// <param name="child">ребенок, для которого устанавливаются параметры.</param>
@@ -119,25 +183,13 @@ namespace PersonListLibrary
             child.Educational = educationals[random.Next(0, educationals.Count)];
             if (random.Next(0, 2) == 0)
             {
-                Adult father = GetRandomAdult();
-
-                while (father.Gender != Gender.Male)
-                {
-                    father = GetRandomAdult();
-                }
-
+                Adult father = GetRandomAdult(Gender.Male);
                 child.Father = father;
             }
 
             if (random.Next(0, 2) == 0)
             {
-                Adult mother = GetRandomAdult();
-
-                while (mother.Gender != Gender.Female)
-                {
-                    mother = GetRandomAdult();
-                }
-
+                Adult mother = GetRandomAdult(Gender.Female);
                 child.Mother = mother;
             }
         }
@@ -160,18 +212,20 @@ namespace PersonListLibrary
         /// <param name="adult">Взрослый, для которого устанавливается партнер.</param>
         public static void SetRandomPartner(Adult adult)
         {
+            Adult partner = new Adult();
             Random random = new Random(Guid.NewGuid().GetHashCode());
-
-            Gender partnerGender = (adult.Gender == Gender.Male) 
-                ? Gender.Female 
-                : Gender.Male;
 
             if (random.Next(0, 2) == 0)
             {
-                Adult partner = GetRandomAdult();
-                while (partner.Gender != partnerGender)
+                switch (adult.Gender)
                 {
-                    partner = GetRandomAdult();
+                    case Gender.Male:
+                        partner = GetRandomAdult(Gender.Female);
+                        break;
+
+                    case Gender.Female:
+                        partner = GetRandomAdult(Gender.Male);
+                        break;
                 }
 
                 adult.Partner = partner;

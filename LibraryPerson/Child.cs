@@ -13,19 +13,77 @@ namespace PersonListLibrary
     public class Child : PersonBase
     {
         /// <summary>
-        /// Поле места обучения.
+        /// поле матери
+        /// </summary>
+        private Adult _mother;
+
+        /// <summary>
+        /// Поле отца
+        /// </summary>
+        private Adult _father;
+
+        /// <summary>
+        /// Поле места обучения
         /// </summary>
         private string _educational;
 
         /// <summary>
         /// свойство для отца
         /// </summary>
-        public Adult Father { get; set; }
+        public Adult Father
+        {
+            get { return _father; }
+
+            set
+            {
+                if (value?.Gender != Gender.Male && value != null)
+                {
+                    throw new ArgumentException
+                        ("Отец должен быть мужского пола");
+                }
+
+                if (Father != null)
+                {
+                    throw new ArgumentException
+                        ("У ребенка уже есть отец");
+                }
+                else
+                {
+                    _father = value;
+                }
+            }
+        }
 
         /// <summary>
         /// свойство для матери
         /// </summary>
-        public Adult Mother { get; set; }
+        public Adult Mother
+        {
+            get
+            {
+                return _mother;
+            }
+
+            set
+            {
+                if (value?.Gender != Gender.Female && value != null)
+                {
+
+                    throw new ArgumentException
+                        ("Мать должна быть женского пола");
+                }
+
+                if (Mother != null)
+                {
+                    throw new ArgumentException
+                        ("У ребенка уже есть мать");
+                }
+                else
+                {
+                    _mother = value;
+                }
+            }
+        }
 
         /// <summary>
         /// свойство для места обучения
@@ -104,7 +162,7 @@ namespace PersonListLibrary
             return base.GetInfo() + $", Отец: {father}, Мать: {mother}, Школа: {Educational}";
         }
 
-        //TODO:
+        //TODO +:
         /// <summary>
         /// Метод верификации объекта Child.
         /// </summary>

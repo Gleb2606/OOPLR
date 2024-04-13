@@ -154,11 +154,15 @@ namespace PersonListLab
             //TODO: вызвать заданный только в наследнике метод +
             if (fourthPerson is Adult adult)
             {
+                Console.WriteLine("Четвертый человек в списке взрослый:");
+                Console.ForegroundColor = ConsoleColor.Red;
                 string testPerson = adult.CitizenGreetings();
                 Console.WriteLine(testPerson);
             }
             else if (fourthPerson is Child child)
             {
+                Console.WriteLine("Четвертый человек в списке ребенок:");
+                Console.ForegroundColor = ConsoleColor.Red;
                 string testPerson = child.ChildGreetings();
                 Console.WriteLine(testPerson);
             }

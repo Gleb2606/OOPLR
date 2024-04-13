@@ -38,8 +38,7 @@ namespace PersonListLibrary
             }
             set
             {
-                string series = value.ToString();
-                if (series.Length != 4)
+                if (!CheckPassport(value, 4))
                 {
                     throw new ArgumentOutOfRangeException
                         ("Серия паспорта должна содержать 4 цифры");
@@ -64,8 +63,7 @@ namespace PersonListLibrary
 
             set
             {
-                string series = value.ToString();
-                if (series.Length != 6)
+                if (!CheckPassport(value, 6))
                 {
                     throw new ArgumentOutOfRangeException
                         ("Номер паспорта должен содержать 6 цифр");
@@ -85,7 +83,14 @@ namespace PersonListLibrary
             get { return _partner; }
             set
             {
+                if (value?.Gender == Gender)
+                {
+                    throw new ArgumentException
+                        ("Однополые браки запрещены!");
+                }
+
                 _partner = value;
+
                 if (value != null)
                 {
                     value._partner = this;
@@ -163,13 +168,24 @@ namespace PersonListLibrary
             return info;
         }
 
-        //TODO:
+        //TODO +:
         /// <summary>
         /// Метод верификации объекта Adult.
         /// </summary>
         public string CitizenGreetings()
         {
             return($"Здравствуйте, гражданин {LastName}");
+        }
+
+        /// <summary>
+        /// Метод проверки данных паспорта.
+        /// </summary>
+        /// <param name="data">Номер/Серия.</param>
+        /// <param name="fieldSize">Допустимый размер поля.</param>
+        /// <returns>Результат проверки(true/false).</returns>
+        private static bool CheckPassport(int data, int fieldSize)
+        {
+            return data.ToString().Length == fieldSize;
         }
     }
 }

@@ -7,8 +7,12 @@ namespace Model
     /// <summary>
     /// Главный класс программы.
     /// </summary>
-    internal class Program
+    internal class ConsoleLoader
     {
+        public void ReadFigureFromConsole(int figure) 
+        {
+
+        }
 
         /// <summary>
         /// Главный метод программы.

@@ -13,7 +13,7 @@
         /// <summary>
         /// Поле высоты А.
         /// </summary>
-        private double _heightB;
+        private double _heightA;
 
         /// <summary>
         /// Конструктор по умолчанию.
@@ -56,11 +56,11 @@
         {
             get
             {
-                return _heightB;
+                return _heightA;
             }
             set
             {
-                _heightB = CheckNumber(value);
+                _heightA = CheckNumber(value);
             }
         }
 

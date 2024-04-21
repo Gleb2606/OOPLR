@@ -9,18 +9,17 @@ namespace Model
     /// </summary>
     internal class ConsoleLoader
     {
-        public void ReadFigureFromConsole(int figure) 
-        {
-
-        }
-
         /// <summary>
         /// Главный метод программы.
         /// </summary>
         /// <param name="args">Аргументы командной строки.</param>
         private static void Main(string[] args)
         {
-            
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            ReadFigureFromConsole.AddFigure();
+
+            Console.ReadKey();  
         }
     }
 }

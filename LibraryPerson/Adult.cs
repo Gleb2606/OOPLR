@@ -50,7 +50,6 @@ namespace PersonListLibrary
             }
         }
         
-        //TODO: validation +
         /// <summary>
         /// свойство для номера паспорта
         /// </summary>
@@ -168,7 +167,6 @@ namespace PersonListLibrary
             return info;
         }
 
-        //TODO +:
         /// <summary>
         /// Метод верификации объекта Adult.
         /// </summary>
@@ -185,6 +183,7 @@ namespace PersonListLibrary
         /// <returns>Результат проверки(true/false).</returns>
         private static bool CheckPassport(int data, int fieldSize)
         {
+            //TODO: 
             return data.ToString().Length == fieldSize;
         }
     }

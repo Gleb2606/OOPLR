@@ -162,7 +162,6 @@ namespace PersonListLibrary
             return base.GetInfo() + $", Отец: {father}, Мать: {mother}, Школа: {Educational}";
         }
 
-        //TODO +:
         /// <summary>
         /// Метод верификации объекта Child.
         /// </summary>

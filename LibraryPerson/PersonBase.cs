@@ -4,7 +4,6 @@ using System.Linq;
 
 namespace PersonListLibrary
 {
-    //TODO: RSDN +
     /// <summary>
     /// Класс, представляющий человека.
     /// </summary>

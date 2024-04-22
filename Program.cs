@@ -152,7 +152,7 @@ namespace PersonListLab
 
             var fourthPerson = personList.GetElementByIndex(3);
             Console.ForegroundColor = ConsoleColor.Red;
-            //TODO: switch-cases +
+
             switch(fourthPerson) 
             {
                 case Adult testAdult:

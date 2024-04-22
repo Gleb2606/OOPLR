@@ -194,6 +194,5 @@ namespace PersonListLibrary
         {
             return($"Здравствуйте, гражданин {LastName}");
         }
-            //TODO +: 
     }
 }

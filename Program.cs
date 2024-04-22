@@ -158,7 +158,6 @@ namespace PersonListLab
                 case Adult testAdult:
                     Console.WriteLine("Четвертый человек в списке - взрослый:");
                     Console.WriteLine(testAdult.CitizenGreetings());
-                    
                     break;
 
                 case Child testChild:

@@ -28,6 +28,26 @@ namespace PersonListLibrary
         private Adult _partner;
 
         /// <summary>
+        /// минимальный номер паспорта
+        /// </summary>
+        public const int minPassportSeries = 1000;
+
+        /// <summary>
+        /// максимальный номер паспорта
+        /// </summary>
+        public const int maxPassportSeries = 9999;
+
+        /// <summary>
+        /// минимальная серия паспорта
+        /// </summary>
+        public const int minPassportNumber = 100000;
+
+        /// <summary>
+        /// максимальная серия паспорта
+        /// </summary>
+        public const int maxPassportNumber = 999999;
+
+        /// <summary>
         /// свойство для серии паспорта
         /// </summary>
         public int PassportSeries 
@@ -38,7 +58,7 @@ namespace PersonListLibrary
             }
             set
             {
-                if (!CheckPassport(value, 4))
+                if (value < minPassportSeries || value > maxPassportSeries)
                 {
                     throw new ArgumentOutOfRangeException
                         ("Серия паспорта должна содержать 4 цифры");
@@ -57,19 +77,19 @@ namespace PersonListLibrary
         {
             get
             {
-                return _passportSeries;
+                return _passportNumber;
             }
 
             set
             {
-                if (!CheckPassport(value, 6))
+                if (value < minPassportNumber || value > maxPassportNumber)
                 {
                     throw new ArgumentOutOfRangeException
                         ("Номер паспорта должен содержать 6 цифр");
                 }
                 else
                 {
-                    _passportSeries = value;
+                    _passportNumber = value;
                 }
             }
         }
@@ -174,17 +194,6 @@ namespace PersonListLibrary
         {
             return($"Здравствуйте, гражданин {LastName}");
         }
-
-        /// <summary>
-        /// Метод проверки данных паспорта.
-        /// </summary>
-        /// <param name="data">Номер/Серия.</param>
-        /// <param name="fieldSize">Допустимый размер поля.</param>
-        /// <returns>Результат проверки(true/false).</returns>
-        private static bool CheckPassport(int data, int fieldSize)
-        {
-            //TODO: 
-            return data.ToString().Length == fieldSize;
-        }
+            //TODO +: 
     }
 }

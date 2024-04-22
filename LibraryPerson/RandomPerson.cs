@@ -138,8 +138,11 @@ namespace PersonListLibrary
             {
                 adult.Job = jobs[random.Next(0, jobs.Count)];
             } 
-            adult.PassportSeries = random.Next(1111, 9999);
-            adult.PassportNumber = random.Next(111111, 999999);
+            adult.PassportSeries = random.Next(Adult.minPassportSeries,
+                                               Adult.maxPassportSeries);
+
+            adult.PassportNumber = random.Next(Adult.minPassportNumber,
+                                               Adult.maxPassportNumber);
         }
 
         /// <summary>

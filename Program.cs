@@ -151,22 +151,21 @@ namespace PersonListLab
             Console.WriteLine(personList.GetInfo());
 
             var fourthPerson = personList.GetElementByIndex(3);
-            //TODO: switch-case
-            if (fourthPerson is Adult adult)
+            Console.ForegroundColor = ConsoleColor.Red;
+            //TODO: switch-cases +
+            switch(fourthPerson) 
             {
-                Console.WriteLine("Четвертый человек в списке взрослый:");
-                Console.ForegroundColor = ConsoleColor.Red;
-                string testPerson = adult.CitizenGreetings();
-                Console.WriteLine(testPerson);
-            }
-            else if (fourthPerson is Child child)
-            {
-                Console.WriteLine("Четвертый человек в списке ребенок:");
-                Console.ForegroundColor = ConsoleColor.Red;
-                string testPerson = child.ChildGreetings();
-                Console.WriteLine(testPerson);
-            }
+                case Adult testAdult:
+                    Console.WriteLine("Четвертый человек в списке - взрослый:");
+                    Console.WriteLine(testAdult.CitizenGreetings());
+                    
+                    break;
 
+                case Child testChild:
+                    Console.WriteLine("Четвертый человек в списке - ребенок:");
+                    Console.WriteLine(testChild.ChildGreetings());
+                    break;
+            }
             Console.ReadKey();
         }
     }

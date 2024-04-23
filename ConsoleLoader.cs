@@ -15,11 +15,38 @@ namespace Model
         /// <param name="args">Аргументы командной строки.</param>
         private static void Main(string[] args)
         {
-            Console.ForegroundColor = ConsoleColor.Green;
+            while (true) 
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
 
-            ReadFigureFromConsole.AddFigure();
+                Console.WriteLine($"Нажмите 1 - если хотите начать расчет," +
+                           $"\nНажмите 2 - если хотите выйти из программы");
 
-            Console.ReadKey();  
+                bool isParsed = short.TryParse(Console.ReadLine(),
+                    out short action);
+
+                if(!isParsed) 
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("некорректный ввод!");
+                }
+
+                switch (action) 
+                {
+                    case 1:
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        ReadFigureFromConsole.AddFigure();
+                        break;
+
+                    case 2:
+                        return;
+
+                    default:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Введите 1 или 2");
+                        break;
+                }
+            }
         }
     }
 }

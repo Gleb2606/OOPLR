@@ -46,7 +46,7 @@ namespace Model
             {
                 Console.Write($"1 - круг,\n" +
                     $"2 - прямоугольник,\n3 - треугольник." +
-                    $"\nРасчёт площади фигуры:");
+                    $"\nВыберите фигуру: ");
 
                 bool _ = int.TryParse(Console.ReadLine(), out int what);
 
@@ -90,7 +90,10 @@ namespace Model
                     Circle circle = (Circle)figure;
                     Console.WriteLine($"Площадь круга: " +
                         $"{Math.Round(figure.Area, 3)}\n");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Нажмите любую кнопку для продолжения");
                     Console.ReadKey();
+                    Console.WriteLine(" ");
                 }), "площадь круга")
             };
 
@@ -114,6 +117,9 @@ namespace Model
                 {
                     Console.WriteLine($"Площадь прямоугольника: " +
                         $"{Math.Round(figure.Area, 3)}\n");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Нажмите любую кнопку для продолжения");
+                    Console.WriteLine(" ");
                     Console.ReadKey();
 
                 }), "Площадь прямоугольника")
@@ -141,7 +147,10 @@ namespace Model
                 {
                     Console.WriteLine($"Площадь треугольника:" +
                         $" {Math.Round(figure.Area, 3)}\n");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Нажмите любую кнопку для продолжения");
                     Console.ReadKey();
+                    Console.WriteLine(" ");
 
                 }), "объема параллелепипеда")
             };

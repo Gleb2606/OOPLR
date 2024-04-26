@@ -30,7 +30,7 @@ namespace Model
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("некорректный ввод!");
                 }
-
+                //TODO: RSDN
                 switch (action) 
                 {
                     case 1:

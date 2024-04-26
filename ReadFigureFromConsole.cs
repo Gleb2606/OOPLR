@@ -52,6 +52,7 @@ namespace Model
 
                 switch (what)
                 {
+                    //TODO: RSDN
                     case 1:
                         {
                             figure = new Circle();
@@ -88,6 +89,7 @@ namespace Model
                 (new Action(() =>
                 {
                     Circle circle = (Circle)figure;
+                    //TODO: duplication
                     Console.WriteLine($"Площадь круга: " +
                         $"{Math.Round(figure.Area, 3)}\n");
                     Console.ForegroundColor = ConsoleColor.White;
@@ -115,6 +117,7 @@ namespace Model
                 }), "сторона В"),
                 (new Action(() =>
                 {
+                    //TODO: duplication
                     Console.WriteLine($"Площадь прямоугольника: " +
                         $"{Math.Round(figure.Area, 3)}\n");
                     Console.ForegroundColor = ConsoleColor.White;
@@ -145,6 +148,7 @@ namespace Model
                 }), "высота А"),
                 (new Action(() =>
                 {
+                    //TODO: duplication
                     Console.WriteLine($"Площадь треугольника:" +
                         $" {Math.Round(figure.Area, 3)}\n");
                     Console.ForegroundColor = ConsoleColor.White;

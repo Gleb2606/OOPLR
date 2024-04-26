@@ -54,30 +54,29 @@ namespace Model
                     $"\nВыберите фигуру: ");
 
                 bool _ = int.TryParse(Console.ReadLine(), out int what);
-
                 switch (what)
                 {
                     //TODO: RSDN +
                     case 1:
-                        {
-                            figure = new Circle();
-                            break;
-                        }
+                    {
+                        figure = new Circle();
+                        break;
+                    }
                     case 2:
-                        {
-                            figure = new Rectangle();
-                            break;
-                        }
+                    {
+                        figure = new Rectangle();
+                        break;
+                    }
                     case 3:
-                        {
-                            figure = new Triangle();
-                            break;
-                        }
+                    {
+                        figure = new Triangle();
+                        break;
+                    }
                     default:
-                        {
-                            throw new ArgumentException
-                            ("Такой фигуры не существует");
-                        }
+                    {
+                        throw new ArgumentException
+                        ("Такой фигуры не существует");
+                    }
                 }
             });
 

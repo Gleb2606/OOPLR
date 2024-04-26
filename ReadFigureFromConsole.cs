@@ -10,11 +10,11 @@ namespace Model
     /// </summary>
     public class ReadFigureFromConsole
     {
-        //TODO: RSDN
+        //TODO: RSDN +
         /// <summary>
         /// Константа степени округления числа.
         /// </summary>
-        public const int roundNumber = 3;
+        public const int _roundNumber = 3;
 
         /// <summary>
         /// Метод проверки ввода числа.
@@ -93,7 +93,7 @@ namespace Model
                 {
                     Circle circle = (Circle)figure;
                     Console.WriteLine($"Площадь круга: " +
-                        $"{Math.Round(figure.Area, roundNumber)}\n");
+                        $"{Math.Round(figure.Area, _roundNumber)}\n");
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Нажмите любую кнопку для продолжения");
                     Console.ReadKey();
@@ -120,7 +120,7 @@ namespace Model
                 (new Action(() =>
                 {
                     Console.WriteLine($"Площадь прямоугольника: " +
-                        $"{Math.Round(figure.Area, roundNumber)}\n");
+                        $"{Math.Round(figure.Area, _roundNumber)}\n");
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Нажмите любую кнопку для продолжения");
                     Console.WriteLine(" ");
@@ -150,7 +150,7 @@ namespace Model
                 (new Action(() =>
                 {
                     Console.WriteLine($"Площадь треугольника:" +
-                        $" {Math.Round(figure.Area, roundNumber)}\n");
+                        $" {Math.Round(figure.Area, _roundNumber)}\n");
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Нажмите любую кнопку для продолжения");
                     Console.ReadKey();

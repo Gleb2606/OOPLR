@@ -10,6 +10,7 @@ namespace Model
     /// </summary>
     public class ReadFigureFromConsole
     {
+        //TODO: RSDN
         /// <summary>
         /// Константа степени округления числа.
         /// </summary>
@@ -56,7 +57,6 @@ namespace Model
                 bool _ = int.TryParse(Console.ReadLine(), out int what);
                 switch (what)
                 {
-                    //TODO: RSDN +
                     case 1:
                     {
                         figure = new Circle();
@@ -92,7 +92,6 @@ namespace Model
                 (new Action(() =>
                 {
                     Circle circle = (Circle)figure;
-                    //TODO: duplication +
                     Console.WriteLine($"Площадь круга: " +
                         $"{Math.Round(figure.Area, roundNumber)}\n");
                     Console.ForegroundColor = ConsoleColor.White;
@@ -120,7 +119,6 @@ namespace Model
                 }), "сторона В"),
                 (new Action(() =>
                 {
-                    //TODO: duplication +
                     Console.WriteLine($"Площадь прямоугольника: " +
                         $"{Math.Round(figure.Area, roundNumber)}\n");
                     Console.ForegroundColor = ConsoleColor.White;
@@ -151,7 +149,6 @@ namespace Model
                 }), "высота А"),
                 (new Action(() =>
                 {
-                    //TODO: duplication +
                     Console.WriteLine($"Площадь треугольника:" +
                         $" {Math.Round(figure.Area, roundNumber)}\n");
                     Console.ForegroundColor = ConsoleColor.White;

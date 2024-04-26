@@ -11,6 +11,11 @@ namespace Model
     public class ReadFigureFromConsole
     {
         /// <summary>
+        /// Константа степени округления числа.
+        /// </summary>
+        public const int roundNumber = 3;
+
+        /// <summary>
         /// Метод проверки ввода числа.
         /// </summary>
         /// <param name="number"></param>
@@ -52,13 +57,12 @@ namespace Model
 
                 switch (what)
                 {
-                    //TODO: RSDN
+                    //TODO: RSDN +
                     case 1:
                         {
                             figure = new Circle();
                             break;
                         }
-
                     case 2:
                         {
                             figure = new Rectangle();
@@ -89,9 +93,9 @@ namespace Model
                 (new Action(() =>
                 {
                     Circle circle = (Circle)figure;
-                    //TODO: duplication
+                    //TODO: duplication +
                     Console.WriteLine($"Площадь круга: " +
-                        $"{Math.Round(figure.Area, 3)}\n");
+                        $"{Math.Round(figure.Area, roundNumber)}\n");
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Нажмите любую кнопку для продолжения");
                     Console.ReadKey();
@@ -117,9 +121,9 @@ namespace Model
                 }), "сторона В"),
                 (new Action(() =>
                 {
-                    //TODO: duplication
+                    //TODO: duplication +
                     Console.WriteLine($"Площадь прямоугольника: " +
-                        $"{Math.Round(figure.Area, 3)}\n");
+                        $"{Math.Round(figure.Area, roundNumber)}\n");
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Нажмите любую кнопку для продолжения");
                     Console.WriteLine(" ");
@@ -148,9 +152,9 @@ namespace Model
                 }), "высота А"),
                 (new Action(() =>
                 {
-                    //TODO: duplication
+                    //TODO: duplication +
                     Console.WriteLine($"Площадь треугольника:" +
-                        $" {Math.Round(figure.Area, 3)}\n");
+                        $" {Math.Round(figure.Area, roundNumber)}\n");
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Нажмите любую кнопку для продолжения");
                     Console.ReadKey();

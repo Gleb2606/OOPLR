@@ -30,21 +30,25 @@ namespace Model
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("некорректный ввод!");
                 }
-                //TODO: RSDN
+                //TODO: RSDN +
                 switch (action) 
                 {
                     case 1:
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        ReadFigureFromConsole.AddFigure();
-                        break;
-
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            ReadFigureFromConsole.AddFigure();
+                            break;
+                        }
                     case 2:
-                        return;
-
+                        {
+                            return;
+                        }
                     default:
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Введите 1 или 2");
-                        break;
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("Введите 1 или 2");
+                            break;
+                        }
                 }
             }
         }

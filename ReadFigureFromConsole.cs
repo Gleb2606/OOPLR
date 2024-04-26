@@ -14,7 +14,7 @@ namespace Model
         /// <summary>
         /// Константа степени округления числа.
         /// </summary>
-        public const int _roundNumber = 3;
+        public const int RoundNumber = 3;
 
         /// <summary>
         /// Метод проверки ввода числа.

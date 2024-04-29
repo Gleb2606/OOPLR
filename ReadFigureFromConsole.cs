@@ -22,7 +22,7 @@ namespace Model
         /// <param name="number"></param>
         /// <returns></returns>
         /// <exception cref="ArgumentException"></exception>
-        private static double CheckNumber(string number)
+        public static double CheckNumber(string number)
         {
             if (number.Contains('.'))
             {

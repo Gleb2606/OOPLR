@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPLR1", "OOPLR1.csproj", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "LibraryPerson\Model.csproj", "{C5C30427-667B-49C3-BCE3-FC0991533179}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewFigure", "ViewFigure\ViewFigure.csproj", "{B06D13E5-67BC-431A-BFA3-74EF119C799E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C5C30427-667B-49C3-BCE3-FC0991533179}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5C30427-667B-49C3-BCE3-FC0991533179}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5C30427-667B-49C3-BCE3-FC0991533179}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B06D13E5-67BC-431A-BFA3-74EF119C799E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B06D13E5-67BC-431A-BFA3-74EF119C799E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B06D13E5-67BC-431A-BFA3-74EF119C799E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B06D13E5-67BC-431A-BFA3-74EF119C799E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

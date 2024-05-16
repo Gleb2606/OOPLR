@@ -64,6 +64,28 @@
         }
 
         /// <summary>
+        /// Тип фигуры.
+        /// </summary>
+        public override string FigureType
+        {
+            get
+            {
+                return $"Прямоугольник";
+            }
+        }
+
+        /// <summary>
+        /// Параметры.
+        /// </summary>
+        public override string Parameters
+        {
+            get
+            {
+                return $"A = {SideA}, B = {SideB}";
+            }
+        }
+
+        /// <summary>
         /// Расчёт объёма шара
         /// </summary>
         /// <returns>volume.</returns>

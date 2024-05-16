@@ -1,4 +1,6 @@
-﻿namespace Model
+﻿using System.Security.Policy;
+
+namespace Model
 {
     /// <summary>
     /// Класс, представляющий список персон.
@@ -61,6 +63,28 @@
             set
             {
                 _heightA = CheckNumber(value);
+            }
+        }
+
+        /// <summary>
+        /// Тип фигуры.
+        /// </summary>
+        public override string FigureType
+        {
+            get
+            {
+                return $"Треугольник";
+            }
+        }
+
+        /// <summary>
+        /// Параметры.
+        /// </summary>
+        public override string Parameters
+        {
+            get
+            {
+                return $"A = {SideA}, H = {HeightA}";
             }
         }
 

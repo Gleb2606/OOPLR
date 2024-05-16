@@ -47,7 +47,7 @@ namespace ViewFigure
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void textBoxVolume_TextChanged(object sender, EventArgs e)
+        private void AreaTextBox_TextChanged(object sender, EventArgs e)
         {
             try
             {
@@ -68,7 +68,7 @@ namespace ViewFigure
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void textBoxVolume_KeyPress(object sender, KeyPressEventArgs e)
+        private void AreaTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             ReadDataFromTextBox.CheckInput(e);
         }
@@ -78,7 +78,7 @@ namespace ViewFigure
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void checkBoxVolume_CheckedChanged(object sender, EventArgs e)
+        private void AreaCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (AreaCheckBox.Checked)
             {

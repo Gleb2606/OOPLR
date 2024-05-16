@@ -44,6 +44,28 @@ namespace Model
         }
 
         /// <summary>
+        /// Тип фигуры.
+        /// </summary>
+        public override string FigureType
+        {
+            get
+            {
+                return $"Круг";
+            }
+        }
+
+        /// <summary>
+        /// Параметры.
+        /// </summary>
+        public override string Parameters
+        {
+            get
+            {
+                return $"R = {Radius}";
+            }
+        }
+
+        /// <summary>
         /// Расчёт объёма шара
         /// </summary>
         /// <returns>volume.</returns>

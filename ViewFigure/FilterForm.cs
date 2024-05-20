@@ -39,7 +39,7 @@ namespace ViewFigure
         {
             InitializeComponent();
             _listFigure = figures;
-            AreaTextBox.Enabled = false;
+            AreaTextBox.Enabled = true;
         }
 
         /// <summary>

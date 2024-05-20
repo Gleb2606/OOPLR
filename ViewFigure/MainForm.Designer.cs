@@ -89,7 +89,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(428, 164);
+            this.dataGridView1.Size = new System.Drawing.Size(590, 164);
             this.dataGridView1.TabIndex = 0;
             // 
             // CleanListButton
@@ -111,7 +111,7 @@
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(459, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(455, 25);
             this.toolStrip1.TabIndex = 8;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -175,7 +175,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(459, 287);
+            this.ClientSize = new System.Drawing.Size(455, 287);
             this.Controls.Add(this.CleanFilterButton);
             this.Controls.Add(this.CleanListButton);
             this.Controls.Add(this.FilterButton);

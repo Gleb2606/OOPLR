@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPLR1", "OOPLR1.csproj", "{82AA0ACC-9750-4C54-9745-4299A5BC5D56}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "LibraryPerson\Model.csproj", "{C5C30427-667B-49C3-BCE3-FC0991533179}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewFigure", "ViewFigure2\ViewFigure.csproj", "{CB4F8AD5-0249-4EE8-A0B7-1AE9537327A2}"
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{82AA0ACC-9750-4C54-9745-4299A5BC5D56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{82AA0ACC-9750-4C54-9745-4299A5BC5D56}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{82AA0ACC-9750-4C54-9745-4299A5BC5D56}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{82AA0ACC-9750-4C54-9745-4299A5BC5D56}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C5C30427-667B-49C3-BCE3-FC0991533179}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C5C30427-667B-49C3-BCE3-FC0991533179}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5C30427-667B-49C3-BCE3-FC0991533179}.Release|Any CPU.ActiveCfg = Release|Any CPU

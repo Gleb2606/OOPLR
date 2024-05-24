@@ -43,7 +43,7 @@ namespace ViewFigure
 
             OK.Enabled = false;
 #if !DEBUG
-            button3.Visible = false;
+            Random.Visible = false;
 #endif
             string[] typeFigure = { "Круг", "Прямоугольник", "Треугольник" };
 

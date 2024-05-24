@@ -33,7 +33,7 @@
             this.Cancel = new System.Windows.Forms.Button();
             this.OK = new System.Windows.Forms.Button();
             this.comboBoxFigures = new System.Windows.Forms.ComboBox();
-            this.labelChouse = new System.Windows.Forms.Label();
+            this.labelChoose = new System.Windows.Forms.Label();
             this.addCircleUserControl = new ViewFigure.AddCircleUserControl();
             this.addRectangleUserControl = new ViewFigure.AddRectangleUserControl();
             this.addTriangleUserControl = new ViewFigure.AddTriangleUserControl();
@@ -80,14 +80,14 @@
             this.comboBoxFigures.TabIndex = 22;
             this.comboBoxFigures.SelectedIndexChanged += new System.EventHandler(this.comboBoxFigeres_SelectedIndexChanged);
             // 
-            // labelChouse
+            // labelChoose
             // 
-            this.labelChouse.AutoSize = true;
-            this.labelChouse.Location = new System.Drawing.Point(20, 20);
-            this.labelChouse.Name = "labelChouse";
-            this.labelChouse.Size = new System.Drawing.Size(129, 20);
-            this.labelChouse.TabIndex = 21;
-            this.labelChouse.Text = "Выберите фигуру";
+            this.labelChoose.AutoSize = true;
+            this.labelChoose.Location = new System.Drawing.Point(20, 20);
+            this.labelChoose.Name = "labelChoose";
+            this.labelChoose.Size = new System.Drawing.Size(129, 20);
+            this.labelChoose.TabIndex = 21;
+            this.labelChoose.Text = "Выберите фигуру";
             // 
             // addCircleUserControl
             // 
@@ -133,7 +133,7 @@
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.OK);
             this.Controls.Add(this.comboBoxFigures);
-            this.Controls.Add(this.labelChouse);
+            this.Controls.Add(this.labelChoose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -151,7 +151,7 @@
         private Button Cancel;
         private Button OK;
         private ComboBox comboBoxFigures;
-        private Label labelChouse;
+        private Label labelChoose;
         private AddCircleUserControl addCircleUserControl;
         private AddRectangleUserControl addRectangleUserControl;
         private AddTriangleUserControl addTriangleUserControl;

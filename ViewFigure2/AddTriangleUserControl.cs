@@ -12,13 +12,16 @@ using System.Windows.Forms;
 
 namespace ViewFigure
 {
+    //TODO: XML
     public partial class AddTriangleUserControl : UserControl, IAddFigure
     {
+        //TODO: XML
         public AddTriangleUserControl()
         {
             InitializeComponent();
         }
 
+        //TODO: duplication
         /// <summary>
         /// Контроль ввода значений.
         /// </summary>
@@ -29,6 +32,7 @@ namespace ViewFigure
             ReadDataFromTextBox.CheckInput(e);
         }
 
+        //TODO: duplication
         /// <summary>
         /// Контроль ввода значений.
         /// </summary>

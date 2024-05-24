@@ -27,6 +27,7 @@ namespace ViewFigure
         private readonly Dictionary<string, UserControl>
             _comboBoxToUserControl;
 
+        //TODO: refactor
         /// <summary>
         /// Метка используемого UserControl.
         /// </summary>
@@ -47,8 +48,7 @@ namespace ViewFigure
 #endif
             string[] typeFigure = { "Круг", "Прямоугольник", "Треугольник" };
 
-            comboBoxFigures.Items.AddRange(new string[]
-                 { typeFigure[0], typeFigure[1], typeFigure[2] });
+            comboBoxFigures.Items.AddRange(typeFigure);
 
             _comboBoxToUserControl = new Dictionary<string, UserControl>()
             {
@@ -93,6 +93,7 @@ namespace ViewFigure
             }
         }
 
+        //TODO: RSDN
         /// <summary>
         /// Применить.
         /// </summary>
@@ -117,6 +118,7 @@ namespace ViewFigure
             }
         }
 
+        //TODO: RSDN
         /// <summary>
         /// Закрыть.
         /// </summary>
@@ -127,6 +129,8 @@ namespace ViewFigure
             Close();
         }
 
+        //TODO: RSDN
+        //TODO: preprocessor directives
         /// <summary>
         /// Рандом.
         /// </summary>

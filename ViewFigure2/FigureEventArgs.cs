@@ -7,12 +7,13 @@ using Model;
 
 namespace ViewFigure
 {
+    //TODO: XML
     public class FigureEventArgs : EventArgs
     {
         /// <summary>
         /// Фигура
         /// </summary>
-        public FigureBase Figure { get; private set; }
+        public FigureBase Figure { get; }
 
         /// <summary>
         /// Добавление фигуры

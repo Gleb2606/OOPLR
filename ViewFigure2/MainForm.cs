@@ -73,7 +73,6 @@ namespace ViewFigure
         /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Выделение памяти
             _figureList = new BindingList<FigureBase>();
             CreateTable(_figureList, dataGridView1);
         }

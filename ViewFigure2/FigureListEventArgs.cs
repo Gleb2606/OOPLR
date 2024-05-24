@@ -8,12 +8,13 @@ using Model;
 
 namespace ViewFigure
 {
+    //TODO: XML
     internal class FigureListEventArgs : EventArgs
     {
         /// <summary>
         /// Список фигур.
         /// </summary>
-        public BindingList<FigureBase> FigureList { get; private set; }
+        public BindingList<FigureBase> FigureList { get; }
 
         /// <summary>
         /// Конструктор события добавления в список фигур.

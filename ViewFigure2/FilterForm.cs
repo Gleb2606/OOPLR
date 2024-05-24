@@ -31,7 +31,8 @@ namespace ViewFigure
         /// Обработка событий
         /// </summary>
         public EventHandler<EventArgs> FigureFiltered;
-
+        
+        //TODO: RSDN
         /// <summary>
         /// Площадь
         /// </summary>
@@ -86,6 +87,7 @@ namespace ViewFigure
                 AreaCheckBox.Enabled = true;
             }
         }
+        //TODO: RSDN
 
         /// <summary>
         /// Кнопка поиска
@@ -112,6 +114,7 @@ namespace ViewFigure
 
                 switch (figure)
                 {
+                    //TODO: RSDN
                     case Circle when CircleCheckBox.Checked:
                     case Model.Rectangle when RectangleCheckBox.Checked:
                     case Triangle when TriangleCheckBox.Checked:
@@ -147,17 +150,12 @@ namespace ViewFigure
                 }
             }
 
-            FigureListEventArgs eventArgs;
+            var eventArgs = new FigureListEventArgs(_listFigureFilter);
 
-            if (count > 0)
-            {
-                eventArgs = new FigureListEventArgs(_listFigureFilter);
-            }
-            else
+            if (count <= 0)
             {
                 MessageBox.Show("Нет фигур удовлетворяющих фильтру!",
                     "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                eventArgs = new FigureListEventArgs(_listFigureFilter);
                 return;
             }
 

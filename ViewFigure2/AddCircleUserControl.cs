@@ -11,8 +11,10 @@ using Model;
 
 namespace ViewFigure
 {
+    //TODO: XML
     public partial class AddCircleUserControl : UserControl, IAddFigure
     {
+        //TODO: XML
         public AddCircleUserControl()
         {
             InitializeComponent();

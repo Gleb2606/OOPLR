@@ -3,7 +3,7 @@
 namespace Model
 {
     /// <summary>
-    /// Класс, представляющий человека.
+    /// Класс круг
     /// </summary>
     public class Circle : FigureBase
     {
@@ -66,7 +66,7 @@ namespace Model
         }
 
         /// <summary>
-        /// Расчёт объёма шара
+        /// Расчёт площади круга
         /// </summary>
         /// <returns>volume.</returns>
         public override double Area => Math.PI * Math.Pow(Radius, 2);

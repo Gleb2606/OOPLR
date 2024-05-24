@@ -3,7 +3,7 @@
 namespace Model
 {
     /// <summary>
-    /// Класс, представляющий список персон.
+    /// Класс треугольник
     /// </summary>
     public class Triangle : FigureBase
     {
@@ -89,7 +89,7 @@ namespace Model
         }
 
         /// <summary>
-        /// Расчёт объёма шара
+        /// Расчёт площади треугольника
         /// </summary>
         /// <returns>volume.</returns>
         public override double Area => 0.5 * SideA * HeightA;

@@ -1,7 +1,7 @@
 ﻿namespace Model
 {
     /// <summary>
-    /// Перечисление, содержащее возможные языки
+    /// Класс прямоугольник
     /// </summary>
     public class Rectangle : FigureBase
     {
@@ -86,7 +86,7 @@
         }
 
         /// <summary>
-        /// Расчёт объёма шара
+        /// Расчёт площади прямоугольника
         /// </summary>
         /// <returns>volume.</returns>
         public override double Area => SideA * SideB;

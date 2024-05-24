@@ -28,7 +28,7 @@ namespace Model
         /// <summary>
         /// Метод расчёта площади фигуры.
         /// </summary>
-        /// <returns>Volume.</returns>
+        /// <returns>area.</returns>
         [DisplayName("Площадь, м2")]
         public abstract double Area { get; }
 

@@ -68,7 +68,7 @@ namespace Model
         /// <summary>
         /// Расчёт площади круга
         /// </summary>
-        /// <returns>volume.</returns>
+        /// <returns>area.</returns>
         public override double Area => Math.PI * Math.Pow(Radius, 2);
     }
 }

@@ -91,7 +91,7 @@ namespace Model
         /// <summary>
         /// Расчёт площади треугольника
         /// </summary>
-        /// <returns>volume.</returns>
+        /// <returns>area.</returns>
         public override double Area => 0.5 * SideA * HeightA;
     }
 }

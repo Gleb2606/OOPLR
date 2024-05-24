@@ -88,7 +88,7 @@
         /// <summary>
         /// Расчёт площади прямоугольника
         /// </summary>
-        /// <returns>volume.</returns>
+        /// <returns>area.</returns>
         public override double Area => SideA * SideB;
     }
 }

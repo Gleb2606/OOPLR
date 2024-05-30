@@ -61,7 +61,6 @@
             this.SideA.Name = "SideA";
             this.SideA.Size = new System.Drawing.Size(100, 23);
             this.SideA.TabIndex = 3;
-            this.SideA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SideA_KeyPress);
             // 
             // SideB
             // 
@@ -70,7 +69,6 @@
             this.SideB.Name = "SideB";
             this.SideB.Size = new System.Drawing.Size(101, 23);
             this.SideB.TabIndex = 4;
-            this.SideB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SideB_KeyPress);
             // 
             // labelMetersSideA
             // 

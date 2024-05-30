@@ -27,11 +27,7 @@ namespace ViewFigure
         private readonly Dictionary<string, UserControl>
             _comboBoxToUserControl;
 
-        //TODO: refactor
-        /// <summary>
-        /// Метка используемого UserControl.
-        /// </summary>
-        private UserControl userControl;
+        //TODO: refactor +
 
         /// <summary>
         /// Форма добавления фигур
@@ -81,16 +77,14 @@ namespace ViewFigure
         {
 
             string figureType = comboBoxFigures.SelectedItem.ToString();
+
             foreach (var (figure, userControl) in _comboBoxToUserControl)
             {
-                userControl.Visible = false;
-                if (figureType == figure)
-                {
-                    userControl.Visible = true;
-                    OK.Enabled = true;
-                    this.userControl = userControl;
-                }
+                userControl.Visible = figureType == figure;
+ 
             }
+
+            OK.Enabled = _comboBoxToUserControl.ContainsKey(figureType); 
         }
 
         //TODO: RSDN +
@@ -143,6 +137,9 @@ namespace ViewFigure
 
             comboBoxFigures.SelectedIndex = random.Next(0, 3);
 
+            var selectedFigure = comboBoxFigures.SelectedItem.ToString();
+            var userControl = _comboBoxToUserControl[selectedFigure];
+
             foreach (TextBox textbox in userControl.Controls.OfType<TextBox>())
             {
                 if (textbox.Visible && String.IsNullOrEmpty(textbox.Text))
@@ -152,5 +149,6 @@ namespace ViewFigure
             }
         }
 #endif
+
     }
 }

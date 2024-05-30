@@ -25,29 +25,22 @@ namespace ViewFigure
         public AddRectangleUserControl()
         {
             InitializeComponent();
+
+            SideA.KeyPress += TextBox_KeyPress;
+            SideB.KeyPress += TextBox_KeyPress;
         }
 
-        //TODO: duplication
+        //TODO: duplication +
         /// <summary>
-        /// Контроль ввода значений.
+        /// Обработчик события KeyPress для текстовых полей.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void SideA_KeyPress(object sender, KeyPressEventArgs e)
+        /// <param name="sender">Источник события.</param>
+        /// <param name="e">Аргументы события.</param>
+        private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             ReadDataFromTextBox.CheckInput(e);
         }
-
-        //TODO: duplication
-        /// <summary>
-        /// Контроль ввода значений.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void SideB_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ReadDataFromTextBox.CheckInput(e);
-        }
+        //TODO: duplication +
 
         /// <summary>
         /// метод добавления круга

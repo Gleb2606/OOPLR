@@ -1,4 +1,4 @@
-﻿using System.Security.Policy;
+﻿using System;
 
 namespace Model
 {
@@ -92,6 +92,6 @@ namespace Model
         /// Расчёт площади треугольника
         /// </summary>
         /// <returns>area.</returns>
-        public override double Area => 0.5 * SideA * HeightA;
+        public override double Area => Math.Round((0.5 * SideA * HeightA), 2);
     }
 }

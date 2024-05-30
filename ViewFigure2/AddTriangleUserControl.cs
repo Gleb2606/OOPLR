@@ -25,30 +25,23 @@ namespace ViewFigure
         public AddTriangleUserControl()
         {
             InitializeComponent();
+
+            SideA.KeyPress += TextBox_KeyPress;
+            HeightA.KeyPress += TextBox_KeyPress;
         }
 
-        //TODO: duplication
+        //TODO: duplication +
         /// <summary>
-        /// Контроль ввода значений.
+        /// Обработчик события KeyPress для текстовых полей.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void SideA_KeyPress(object sender, KeyPressEventArgs e)
+        /// <param name="sender">Источник события.</param>
+        /// <param name="e">Аргументы события.</param>
+        private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             ReadDataFromTextBox.CheckInput(e);
         }
 
-        //TODO: duplication
-        /// <summary>
-        /// Контроль ввода значений.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void HeightA_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ReadDataFromTextBox.CheckInput(e);
-        }
-
+        //TODO: duplication+
         /// <summary>
         /// метод добавления круга
         /// </summary>

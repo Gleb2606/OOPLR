@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,14 +25,16 @@ namespace ViewFigure
         public AddCircleUserControl()
         {
             InitializeComponent();
+
+            Radius.KeyPress += TextBox_KeyPress;
         }
 
         /// <summary>
-        /// Контроль ввода значений.
+        /// Обработчик события KeyPress для текстовых полей.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Radius_KeyPress(object sender, KeyPressEventArgs e)
+        /// <param name="sender">Источник события.</param>
+        /// <param name="e">Аргументы события.</param>
+        private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             ReadDataFromTextBox.CheckInput(e);
         }

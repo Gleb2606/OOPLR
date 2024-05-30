@@ -9,7 +9,7 @@ namespace ViewFigure
 {
     //TODO: XML +
     /// <summary>
-    /// Действия при добавлении фигуры
+    /// Пользовательское действие добавление фигуры
     /// </summary>
     public class FigureEventArgs : EventArgs
     {

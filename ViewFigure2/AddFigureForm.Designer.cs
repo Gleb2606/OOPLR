@@ -28,124 +28,136 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddFigureForm));
-            this.Random = new System.Windows.Forms.Button();
-            this.Cancel = new System.Windows.Forms.Button();
-            this.OK = new System.Windows.Forms.Button();
-            this.comboBoxFigures = new System.Windows.Forms.ComboBox();
-            this.labelChoose = new System.Windows.Forms.Label();
-            this.addCircleUserControl = new ViewFigure.AddCircleUserControl();
-            this.addRectangleUserControl = new ViewFigure.AddRectangleUserControl();
-            this.addTriangleUserControl = new ViewFigure.AddTriangleUserControl();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox1.SuspendLayout();
-            this.SuspendLayout();
+            Random = new Button();
+            Cancel = new Button();
+            OK = new Button();
+            comboBoxFigures = new ComboBox();
+            labelChoose = new Label();
+            addCircleUserControl = new AddCircleUserControl();
+            addRectangleUserControl = new AddRectangleUserControl();
+            addTriangleUserControl = new AddTriangleUserControl();
+            groupBox1 = new GroupBox();
+            groupBox1.SuspendLayout();
+            SuspendLayout();
             // 
             // Random
             // 
-            this.Random.Location = new System.Drawing.Point(180, 50);
-            this.Random.Name = "Random";
-            this.Random.Size = new System.Drawing.Size(140, 30);
-            this.Random.TabIndex = 26;
-            this.Random.Text = "Случайная фигура";
-            this.Random.UseVisualStyleBackColor = true;
 #if DEBUG
-            this.Random.Click += new System.EventHandler(this.ButtonRandom_Click);
+            Random.Location = new Point(158, 38);
+            Random.Margin = new Padding(3, 2, 3, 2);
+            Random.Name = "Random";
+            Random.Size = new Size(122, 22);
+            Random.TabIndex = 26;
+            Random.Text = "Случайная фигура";
+            Random.UseVisualStyleBackColor = true;
+            Random.Click += ButtonRandom_Click;
 #endif
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(180, 280);
-            this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(140, 30);
-            this.Cancel.TabIndex = 25;
-            this.Cancel.Text = "Отменить";
-            this.Cancel.UseVisualStyleBackColor = true;
-            this.Cancel.Click += new System.EventHandler(this.ButtonCancel_Click);
+            Cancel.Location = new Point(158, 213);
+            Cancel.Margin = new Padding(3, 2, 3, 2);
+            Cancel.Name = "Cancel";
+            Cancel.Size = new Size(122, 22);
+            Cancel.TabIndex = 25;
+            Cancel.Text = "Отменить";
+            Cancel.UseVisualStyleBackColor = true;
+            Cancel.Click += ButtonCancel_Click;
             // 
             // OK
             // 
-            this.OK.Location = new System.Drawing.Point(20, 280);
-            this.OK.Name = "OK";
-            this.OK.Size = new System.Drawing.Size(140, 30);
-            this.OK.TabIndex = 23;
-            this.OK.Text = "Ok";
-            this.OK.UseVisualStyleBackColor = true;
-            this.OK.Click += new System.EventHandler(this.ButtonOK_Click);
+            OK.Location = new Point(19, 213);
+            OK.Margin = new Padding(3, 2, 3, 2);
+            OK.Name = "OK";
+            OK.Size = new Size(122, 22);
+            OK.TabIndex = 23;
+            OK.Text = "OK";
+            OK.UseVisualStyleBackColor = true;
+            OK.Click += ButtonOK_Click;
             // 
             // comboBoxFigures
             // 
-            this.comboBoxFigures.FormattingEnabled = true;
-            this.comboBoxFigures.Location = new System.Drawing.Point(20, 52);
-            this.comboBoxFigures.Name = "comboBoxFigures";
-            this.comboBoxFigures.Size = new System.Drawing.Size(140, 28);
-            this.comboBoxFigures.TabIndex = 22;
-            this.comboBoxFigures.SelectedIndexChanged += new System.EventHandler(this.ComboBoxFigeres_SelectedIndexChanged);
+            comboBoxFigures.FormattingEnabled = true;
+            comboBoxFigures.Location = new Point(18, 39);
+            comboBoxFigures.Margin = new Padding(3, 2, 3, 2);
+            comboBoxFigures.Name = "comboBoxFigures";
+#if DEBUG
+            comboBoxFigures.Size = new Size(123, 23);
+#else
+            comboBoxFigures.Size = new Size(262, 23);
+#endif
+            comboBoxFigures.TabIndex = 22;
+            comboBoxFigures.SelectedIndexChanged += ComboBoxFigeres_SelectedIndexChanged;
             // 
             // labelChoose
             // 
-            this.labelChoose.AutoSize = true;
-            this.labelChoose.Location = new System.Drawing.Point(20, 20);
-            this.labelChoose.Name = "labelChoose";
-            this.labelChoose.Size = new System.Drawing.Size(129, 20);
-            this.labelChoose.TabIndex = 21;
-            this.labelChoose.Text = "Выберите фигуру";
+            labelChoose.AutoSize = true;
+            labelChoose.Location = new Point(18, 15);
+            labelChoose.Name = "labelChoose";
+            labelChoose.Size = new Size(104, 15);
+            labelChoose.TabIndex = 21;
+            labelChoose.Text = "Выберите фигуру";
             // 
             // addCircleUserControl
             // 
-            this.addCircleUserControl.Location = new System.Drawing.Point(20, 20);
-            this.addCircleUserControl.Name = "addCircleUserControl";
-            this.addCircleUserControl.Size = new System.Drawing.Size(244, 58);
-            this.addCircleUserControl.TabIndex = 27;
+            addCircleUserControl.Location = new Point(18, 15);
+            addCircleUserControl.Margin = new Padding(3, 2, 3, 2);
+            addCircleUserControl.Name = "addCircleUserControl";
+            addCircleUserControl.Size = new Size(214, 44);
+            addCircleUserControl.TabIndex = 27;
             // 
             // addRectangleUserControl
             // 
-            this.addRectangleUserControl.Location = new System.Drawing.Point(20, 20);
-            this.addRectangleUserControl.Name = "addRectangleUserControl";
-            this.addRectangleUserControl.Size = new System.Drawing.Size(252, 144);
-            this.addRectangleUserControl.TabIndex = 28;
+            addRectangleUserControl.Location = new Point(18, 15);
+            addRectangleUserControl.Margin = new Padding(3, 2, 3, 2);
+            addRectangleUserControl.Name = "addRectangleUserControl";
+            addRectangleUserControl.Size = new Size(220, 108);
+            addRectangleUserControl.TabIndex = 28;
             // 
             // addTriangleUserControl
             // 
-            this.addTriangleUserControl.Location = new System.Drawing.Point(20, 20);
-            this.addTriangleUserControl.Name = "addTriangleUserControl";
-            this.addTriangleUserControl.Size = new System.Drawing.Size(244, 131);
-            this.addTriangleUserControl.TabIndex = 29;
+            addTriangleUserControl.Location = new Point(18, 15);
+            addTriangleUserControl.Margin = new Padding(3, 2, 3, 2);
+            addTriangleUserControl.Name = "addTriangleUserControl";
+            addTriangleUserControl.Size = new Size(214, 98);
+            addTriangleUserControl.TabIndex = 29;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.addTriangleUserControl);
-            this.groupBox1.Controls.Add(this.addRectangleUserControl);
-            this.groupBox1.Controls.Add(this.addCircleUserControl);
-            this.groupBox1.Location = new System.Drawing.Point(20, 100);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(300, 170);
-            this.groupBox1.TabIndex = 30;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Параметры фигуры";
+            groupBox1.Controls.Add(addTriangleUserControl);
+            groupBox1.Controls.Add(addRectangleUserControl);
+            groupBox1.Controls.Add(addCircleUserControl);
+            groupBox1.Location = new Point(18, 75);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(262, 128);
+            groupBox1.TabIndex = 30;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Параметры фигуры";
             // 
-            // AddForm
+            // AddFigureForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(342, 328);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.Random);
-            this.Controls.Add(this.Cancel);
-            this.Controls.Add(this.OK);
-            this.Controls.Add(this.comboBoxFigures);
-            this.Controls.Add(this.labelChoose);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.Name = "AddForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Добавление фигуры";
-            this.Load += new System.EventHandler(this.AddForm_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlLightLight;
+            ClientSize = new Size(299, 246);
+            Controls.Add(groupBox1);
+            Controls.Add(Random);
+            Controls.Add(Cancel);
+            Controls.Add(OK);
+            Controls.Add(comboBoxFigures);
+            Controls.Add(labelChoose);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
+            Name = "AddFigureForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Добавление фигуры";
+            Load += AddForm_Load;
+            groupBox1.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
 #endregion

@@ -47,10 +47,10 @@
             // 
             // DeleteFigureButton
             // 
-            DeleteFigureButton.Location = new Point(13, 255);
+            DeleteFigureButton.Location = new Point(13, 256);
             DeleteFigureButton.Margin = new Padding(3, 2, 3, 2);
             DeleteFigureButton.Name = "DeleteFigureButton";
-            DeleteFigureButton.Size = new Size(192, 22);
+            DeleteFigureButton.Size = new Size(151, 21);
             DeleteFigureButton.TabIndex = 6;
             DeleteFigureButton.Text = "Удалить фигуру";
             DeleteFigureButton.UseVisualStyleBackColor = true;
@@ -146,10 +146,10 @@
             // 
             // FilterButton
             // 
-            FilterButton.Location = new Point(211, 255);
+            FilterButton.Location = new Point(170, 256);
             FilterButton.Margin = new Padding(3, 2, 3, 2);
             FilterButton.Name = "FilterButton";
-            FilterButton.Size = new Size(101, 22);
+            FilterButton.Size = new Size(147, 22);
             FilterButton.TabIndex = 9;
             FilterButton.Text = "Фильтр";
             FilterButton.UseVisualStyleBackColor = true;
@@ -157,10 +157,10 @@
             // 
             // CleanFilterButton
             // 
-            CleanFilterButton.Location = new Point(318, 255);
+            CleanFilterButton.Location = new Point(323, 256);
             CleanFilterButton.Margin = new Padding(3, 2, 3, 2);
             CleanFilterButton.Name = "CleanFilterButton";
-            CleanFilterButton.Size = new Size(147, 22);
+            CleanFilterButton.Size = new Size(142, 22);
             CleanFilterButton.TabIndex = 10;
             CleanFilterButton.Text = "Сбросить";
             CleanFilterButton.UseVisualStyleBackColor = true;

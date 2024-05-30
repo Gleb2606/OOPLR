@@ -1,4 +1,6 @@
-﻿namespace Model
+﻿using System;
+
+namespace Model
 {
     /// <summary>
     /// Класс прямоугольник
@@ -89,6 +91,6 @@
         /// Расчёт площади прямоугольника
         /// </summary>
         /// <returns>area.</returns>
-        public override double Area => SideA * SideB;
+        public override double Area => Math.Round((SideA * SideB), 2);
     }
 }

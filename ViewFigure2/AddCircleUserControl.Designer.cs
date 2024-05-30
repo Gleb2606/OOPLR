@@ -49,7 +49,6 @@
             this.Radius.Name = "Radius";
             this.Radius.Size = new System.Drawing.Size(120, 23);
             this.Radius.TabIndex = 1;
-            this.Radius.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Radius_KeyPress);
             // 
             // labelMeters
             // 

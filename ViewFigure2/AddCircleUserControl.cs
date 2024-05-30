@@ -11,10 +11,16 @@ using Model;
 
 namespace ViewFigure
 {
-    //TODO: XML
+    //TODO: XML +
+    /// <summary>
+    /// Пользовательское действие добавление круга
+    /// </summary>
     public partial class AddCircleUserControl : UserControl, IAddFigure
     {
-        //TODO: XML
+        //TODO: XML +
+        /// <summary>
+        /// Инициализация добавления круга
+        /// </summary>
         public AddCircleUserControl()
         {
             InitializeComponent();

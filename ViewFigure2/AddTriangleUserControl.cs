@@ -12,10 +12,16 @@ using System.Windows.Forms;
 
 namespace ViewFigure
 {
-    //TODO: XML
+    //TODO: XML +
+    /// <summary>
+    /// Пользовательское действие добавление треугольника
+    /// </summary>
     public partial class AddTriangleUserControl : UserControl, IAddFigure
     {
-        //TODO: XML
+        //TODO: XML +
+        /// <summary>
+        /// Инициализация добавления треугольника
+        /// </summary>
         public AddTriangleUserControl()
         {
             InitializeComponent();

@@ -7,7 +7,10 @@ using Model;
 
 namespace ViewFigure
 {
-    //TODO: XML
+    //TODO: XML +
+    /// <summary>
+    /// Действия при добавлении фигуры
+    /// </summary>
     public class FigureEventArgs : EventArgs
     {
         /// <summary>

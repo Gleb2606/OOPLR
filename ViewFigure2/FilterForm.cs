@@ -32,11 +32,16 @@ namespace ViewFigure
         /// </summary>
         public EventHandler<EventArgs> FigureFiltered;
         
-        //TODO: RSDN
+        //TODO: RSDN +
         /// <summary>
         /// Площадь
         /// </summary>
-        private double area;
+        private double _area;
+
+        /// <summary>
+        /// Фильтрация
+        /// </summary>
+        /// <param name="figures"></param>
         public FilterForm(BindingList<FigureBase> figures)
         {
             InitializeComponent();
@@ -55,7 +60,7 @@ namespace ViewFigure
             {
                 if (AreaTextBox.Text != "")
                 {
-                    area = ReadDataFromTextBox.CheckNumber(AreaTextBox.Text);
+                    _area = ReadDataFromTextBox.CheckNumber(AreaTextBox.Text);
                 }
             }
             catch
@@ -87,8 +92,7 @@ namespace ViewFigure
                 AreaCheckBox.Enabled = true;
             }
         }
-        //TODO: RSDN
-
+        //TODO: RSDN +
         /// <summary>
         /// Кнопка поиска
         /// </summary>
@@ -114,35 +118,35 @@ namespace ViewFigure
 
                 switch (figure)
                 {
-                    //TODO: RSDN
+                    //TODO: RSDN +
                     case Circle when CircleCheckBox.Checked:
                     case Model.Rectangle when RectangleCheckBox.Checked:
                     case Triangle when TriangleCheckBox.Checked:
+                    {
+                        if (AreaCheckBox.Checked)
                         {
-                            if (AreaCheckBox.Checked)
-                            {
-                                if (figure.Area == area)
-                                {
-                                    count++;
-                                    _listFigureFilter.Add(figure);
-                                    break;
-                                }
-                                break;
-                            }
-                            else
+                            if (figure.Area == _area)
                             {
                                 count++;
                                 _listFigureFilter.Add(figure);
                                 break;
                             }
+                            break;
                         }
+                        else
+                        {
+                            count++;
+                            _listFigureFilter.Add(figure);
+                            break;
+                        }
+                    }
                 }
 
                 if (!CircleCheckBox.Checked
                     && !TriangleCheckBox.Checked
                     && !RectangleCheckBox.Checked)
                 {
-                    if (AreaCheckBox.Checked && figure.Area == area)
+                    if (AreaCheckBox.Checked && figure.Area == _area)
                     {
                         count++;
                         _listFigureFilter.Add(figure);

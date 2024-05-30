@@ -77,7 +77,7 @@ namespace ViewFigure
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void comboBoxFigeres_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBoxFigeres_SelectedIndexChanged(object sender, EventArgs e)
         {
 
             string figureType = comboBoxFigures.SelectedItem.ToString();
@@ -93,13 +93,13 @@ namespace ViewFigure
             }
         }
 
-        //TODO: RSDN
+        //TODO: RSDN +
         /// <summary>
         /// Применить.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void buttonOK_Click(object sender, EventArgs e)
+        private void ButtonOK_Click(object sender, EventArgs e)
         {
             try
             {
@@ -118,25 +118,26 @@ namespace ViewFigure
             }
         }
 
-        //TODO: RSDN
+        //TODO: RSDN +
         /// <summary>
         /// Закрыть.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void buttonCancel_Click(object sender, EventArgs e)
+        private void ButtonCancel_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        //TODO: RSDN
-        //TODO: preprocessor directives
+        //TODO: RSDN +
+        //TODO: preprocessor directives +
+#if DEBUG
         /// <summary>
         /// Рандом.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void buttonRandom_Click(object sender, EventArgs e)
+        private void ButtonRandom_Click(object sender, EventArgs e)
         {
             Random random = new Random();
 
@@ -150,5 +151,6 @@ namespace ViewFigure
                 }
             }
         }
+#endif
     }
 }

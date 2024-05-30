@@ -49,7 +49,9 @@
             this.Random.TabIndex = 26;
             this.Random.Text = "Случайная фигура";
             this.Random.UseVisualStyleBackColor = true;
-            this.Random.Click += new System.EventHandler(this.buttonRandom_Click);
+#if DEBUG
+            this.Random.Click += new System.EventHandler(this.ButtonRandom_Click);
+#endif
             // 
             // Cancel
             // 
@@ -59,7 +61,7 @@
             this.Cancel.TabIndex = 25;
             this.Cancel.Text = "Отменить";
             this.Cancel.UseVisualStyleBackColor = true;
-            this.Cancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            this.Cancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
             // OK
             // 
@@ -69,7 +71,7 @@
             this.OK.TabIndex = 23;
             this.OK.Text = "Ok";
             this.OK.UseVisualStyleBackColor = true;
-            this.OK.Click += new System.EventHandler(this.buttonOK_Click);
+            this.OK.Click += new System.EventHandler(this.ButtonOK_Click);
             // 
             // comboBoxFigures
             // 
@@ -78,7 +80,7 @@
             this.comboBoxFigures.Name = "comboBoxFigures";
             this.comboBoxFigures.Size = new System.Drawing.Size(140, 28);
             this.comboBoxFigures.TabIndex = 22;
-            this.comboBoxFigures.SelectedIndexChanged += new System.EventHandler(this.comboBoxFigeres_SelectedIndexChanged);
+            this.comboBoxFigures.SelectedIndexChanged += new System.EventHandler(this.ComboBoxFigeres_SelectedIndexChanged);
             // 
             // labelChoose
             // 
@@ -146,7 +148,7 @@
             this.PerformLayout();
         }
 
-        #endregion
+#endregion
         private Button Random;
         private Button Cancel;
         private Button OK;

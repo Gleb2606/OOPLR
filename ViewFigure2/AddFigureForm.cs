@@ -112,7 +112,7 @@ namespace ViewFigure
             catch
             {
                 MessageBox.Show("Введено некорректное значение!\n" +
-                    "Введите одно положительное десятичное число" +
+                    "Введите положительные числа" +
                     " в каждое текстовое поле.",
                     "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

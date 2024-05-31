@@ -73,7 +73,7 @@ namespace ViewFigure
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ComboBoxFigeres_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBoxFigures_SelectedIndexChanged(object sender, EventArgs e)
         {
 
             string figureType = comboBoxFigures.SelectedItem.ToString();

@@ -129,7 +129,7 @@
             this.FilterButton.TabIndex = 1;
             this.FilterButton.Text = "Отфильтровать";
             this.FilterButton.UseVisualStyleBackColor = true;
-            this.FilterButton.Click += new System.EventHandler(this.buttonFilter_Click);
+            this.FilterButton.Click += new System.EventHandler(this.ButtonFilter_Click);
             // 
             // FilterForm
             // 

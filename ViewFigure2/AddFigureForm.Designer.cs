@@ -87,7 +87,7 @@
             comboBoxFigures.Size = new Size(262, 23);
 #endif
             comboBoxFigures.TabIndex = 22;
-            comboBoxFigures.SelectedIndexChanged += ComboBoxFigeres_SelectedIndexChanged;
+            comboBoxFigures.SelectedIndexChanged += ComboBoxFigures_SelectedIndexChanged;
             // 
             // labelChoose
             // 

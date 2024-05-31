@@ -98,7 +98,7 @@ namespace ViewFigure
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void buttonFilter_Click(object sender, EventArgs e)
+        private void ButtonFilter_Click(object sender, EventArgs e)
         {
             _listFigureFilter = new BindingList<FigureBase>();
 

@@ -47,10 +47,10 @@
             // 
             // DeleteFigureButton
             // 
-            DeleteFigureButton.Location = new Point(13, 256);
+            DeleteFigureButton.Location = new Point(13, 251);
             DeleteFigureButton.Margin = new Padding(3, 2, 3, 2);
             DeleteFigureButton.Name = "DeleteFigureButton";
-            DeleteFigureButton.Size = new Size(151, 21);
+            DeleteFigureButton.Size = new Size(151, 22);
             DeleteFigureButton.TabIndex = 6;
             DeleteFigureButton.Text = "Удалить фигуру";
             DeleteFigureButton.UseVisualStyleBackColor = true;
@@ -97,7 +97,7 @@
             CleanListButton.Location = new Point(250, 225);
             CleanListButton.Margin = new Padding(3, 2, 3, 2);
             CleanListButton.Name = "CleanListButton";
-            CleanListButton.Size = new Size(215, 22);
+            CleanListButton.Size = new Size(217, 22);
             CleanListButton.TabIndex = 7;
             CleanListButton.Text = "Очистить список";
             CleanListButton.UseVisualStyleBackColor = true;
@@ -109,7 +109,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripDropDownButton1, toolStripButton1 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(479, 25);
+            toolStrip1.Size = new Size(473, 25);
             toolStrip1.TabIndex = 8;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -146,10 +146,10 @@
             // 
             // FilterButton
             // 
-            FilterButton.Location = new Point(170, 256);
+            FilterButton.Location = new Point(170, 251);
             FilterButton.Margin = new Padding(3, 2, 3, 2);
             FilterButton.Name = "FilterButton";
-            FilterButton.Size = new Size(147, 22);
+            FilterButton.Size = new Size(151, 22);
             FilterButton.TabIndex = 9;
             FilterButton.Text = "Фильтр";
             FilterButton.UseVisualStyleBackColor = true;
@@ -157,10 +157,10 @@
             // 
             // CleanFilterButton
             // 
-            CleanFilterButton.Location = new Point(323, 256);
+            CleanFilterButton.Location = new Point(323, 251);
             CleanFilterButton.Margin = new Padding(3, 2, 3, 2);
             CleanFilterButton.Name = "CleanFilterButton";
-            CleanFilterButton.Size = new Size(142, 22);
+            CleanFilterButton.Size = new Size(144, 22);
             CleanFilterButton.TabIndex = 10;
             CleanFilterButton.Text = "Сбросить";
             CleanFilterButton.UseVisualStyleBackColor = true;
@@ -171,7 +171,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(479, 287);
+            ClientSize = new Size(473, 281);
             Controls.Add(CleanFilterButton);
             Controls.Add(CleanListButton);
             Controls.Add(FilterButton);

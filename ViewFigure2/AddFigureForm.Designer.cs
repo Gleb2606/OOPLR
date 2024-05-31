@@ -42,6 +42,7 @@
             // 
             // Random
             // 
+#if DEBUG
             Random.Location = new Point(158, 39);
             Random.Margin = new Padding(3, 2, 3, 2);
             Random.Name = "Random";
@@ -50,6 +51,7 @@
             Random.Text = "Случайная фигура";
             Random.UseVisualStyleBackColor = true;
             Random.Click += ButtonRandom_Click;
+#endif
             // 
             // Cancel
             // 
@@ -154,7 +156,7 @@
             PerformLayout();
         }
 
-        #endregion
+#endregion
         private Button Random;
         private Button Cancel;
         private Button OK;

@@ -1,7 +1,5 @@
 using Model;
 using System.ComponentModel;
-using System.Security.Policy;
-using System.Windows.Forms;
 using System.Xml.Serialization;
 
 namespace ViewFigure
@@ -158,12 +156,13 @@ namespace ViewFigure
             if (openFileDialog.ShowDialog() != DialogResult.OK) return;
 
             var path = openFileDialog.FileName.ToString();
+            var tempFigureList = new BindingList<FigureBase>(_figureList.ToList());
+
             try
             {
                 using (var file = new StreamReader(path))
                 {
-                    _figureList = (BindingList<FigureBase>)
-                        _serializer.Deserialize(file);
+                    _figureList = (BindingList<FigureBase>)_serializer.Deserialize(file);
                 }
                 foreach (var figure in _figureList)
                 {
@@ -179,14 +178,18 @@ namespace ViewFigure
                     "Загрузка завершена",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch(ArgumentException ex) 
+            catch (ArgumentException ex)
             {
+                _figureList = tempFigureList;
+                dataGridView.DataSource = _figureList; 
                 MessageBox.Show("Ошибка при загрузке файла:\n" + ex.Message,
                     "Ошибка",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception)
             {
+                _figureList = tempFigureList; 
+                dataGridView.DataSource = _figureList;
                 MessageBox.Show("Ошибка при загрузке файла:\n" +
                     "Файл повреждён или не соответствует формату.",
                     "Ошибка",

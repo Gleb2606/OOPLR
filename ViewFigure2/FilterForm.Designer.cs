@@ -28,126 +28,125 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox = new System.Windows.Forms.GroupBox();
-            this.AreaCheckBox = new System.Windows.Forms.CheckBox();
-            this.RectangleCheckBox = new System.Windows.Forms.CheckBox();
-            this.TriangleCheckBox = new System.Windows.Forms.CheckBox();
-            this.labelMeters = new System.Windows.Forms.Label();
-            this.AreaTextBox = new System.Windows.Forms.TextBox();
-            this.CircleCheckBox = new System.Windows.Forms.CheckBox();
-            this.FilterButton = new System.Windows.Forms.Button();
-            this.groupBox.SuspendLayout();
-            this.SuspendLayout();
+            groupBox = new GroupBox();
+            AreaCheckBox = new CheckBox();
+            RectangleCheckBox = new CheckBox();
+            TriangleCheckBox = new CheckBox();
+            labelMeters = new Label();
+            AreaTextBox = new TextBox();
+            CircleCheckBox = new CheckBox();
+            FilterButton = new Button();
+            groupBox.SuspendLayout();
+            SuspendLayout();
             // 
-            // groupBox1
+            // groupBox
             // 
-            this.groupBox.Controls.Add(this.AreaCheckBox);
-            this.groupBox.Controls.Add(this.RectangleCheckBox);
-            this.groupBox.Controls.Add(this.TriangleCheckBox);
-            this.groupBox.Controls.Add(this.labelMeters);
-            this.groupBox.Controls.Add(this.AreaTextBox);
-            this.groupBox.Controls.Add(this.CircleCheckBox);
-            this.groupBox.Location = new System.Drawing.Point(12, 11);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox.Name = "groupBox1";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox.Size = new System.Drawing.Size(188, 116);
-            this.groupBox.TabIndex = 0;
-            this.groupBox.TabStop = false;
-            this.groupBox.Text = "Параметры фильтрации";
+            groupBox.Controls.Add(AreaCheckBox);
+            groupBox.Controls.Add(RectangleCheckBox);
+            groupBox.Controls.Add(TriangleCheckBox);
+            groupBox.Controls.Add(labelMeters);
+            groupBox.Controls.Add(AreaTextBox);
+            groupBox.Controls.Add(CircleCheckBox);
+            groupBox.Location = new Point(12, 11);
+            groupBox.Margin = new Padding(3, 2, 3, 2);
+            groupBox.Name = "groupBox";
+            groupBox.Padding = new Padding(3, 2, 3, 2);
+            groupBox.Size = new Size(188, 116);
+            groupBox.TabIndex = 0;
+            groupBox.TabStop = false;
+            groupBox.Text = "Параметры фильтрации";
             // 
             // AreaCheckBox
             // 
-            this.AreaCheckBox.AutoSize = true;
-            this.AreaCheckBox.Location = new System.Drawing.Point(9, 88);
-            this.AreaCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.AreaCheckBox.Name = "AreaCheckBox";
-            this.AreaCheckBox.Size = new System.Drawing.Size(78, 19);
-            this.AreaCheckBox.TabIndex = 6;
-            this.AreaCheckBox.Text = "Площадь";
-            this.AreaCheckBox.UseVisualStyleBackColor = true;
-            this.AreaCheckBox.CheckedChanged += new System.EventHandler(this.AreaCheckBox_CheckedChanged);
+            AreaCheckBox.AutoSize = true;
+            AreaCheckBox.Location = new Point(9, 88);
+            AreaCheckBox.Margin = new Padding(3, 2, 3, 2);
+            AreaCheckBox.Name = "AreaCheckBox";
+            AreaCheckBox.Size = new Size(78, 19);
+            AreaCheckBox.TabIndex = 6;
+            AreaCheckBox.Text = "Площадь";
+            AreaCheckBox.UseVisualStyleBackColor = true;
+            AreaCheckBox.CheckedChanged += AreaCheckBox_CheckedChanged;
             // 
             // RectangleCheckBox
             // 
-            this.RectangleCheckBox.AutoSize = true;
-            this.RectangleCheckBox.Location = new System.Drawing.Point(9, 65);
-            this.RectangleCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.RectangleCheckBox.Name = "RectangleCheckBox";
-            this.RectangleCheckBox.Size = new System.Drawing.Size(115, 19);
-            this.RectangleCheckBox.TabIndex = 5;
-            this.RectangleCheckBox.Text = "Прямоугольник";
-            this.RectangleCheckBox.UseVisualStyleBackColor = true;
+            RectangleCheckBox.AutoSize = true;
+            RectangleCheckBox.Location = new Point(9, 65);
+            RectangleCheckBox.Margin = new Padding(3, 2, 3, 2);
+            RectangleCheckBox.Name = "RectangleCheckBox";
+            RectangleCheckBox.Size = new Size(115, 19);
+            RectangleCheckBox.TabIndex = 5;
+            RectangleCheckBox.Text = "Прямоугольник";
+            RectangleCheckBox.UseVisualStyleBackColor = true;
             // 
             // TriangleCheckBox
             // 
-            this.TriangleCheckBox.AutoSize = true;
-            this.TriangleCheckBox.Location = new System.Drawing.Point(9, 42);
-            this.TriangleCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TriangleCheckBox.Name = "TriangleCheckBox";
-            this.TriangleCheckBox.Size = new System.Drawing.Size(96, 19);
-            this.TriangleCheckBox.TabIndex = 4;
-            this.TriangleCheckBox.Text = "Треугольник";
-            this.TriangleCheckBox.UseVisualStyleBackColor = true;
+            TriangleCheckBox.AutoSize = true;
+            TriangleCheckBox.Location = new Point(9, 42);
+            TriangleCheckBox.Margin = new Padding(3, 2, 3, 2);
+            TriangleCheckBox.Name = "TriangleCheckBox";
+            TriangleCheckBox.Size = new Size(96, 19);
+            TriangleCheckBox.TabIndex = 4;
+            TriangleCheckBox.Text = "Треугольник";
+            TriangleCheckBox.UseVisualStyleBackColor = true;
             // 
             // labelMeters
             // 
-            this.labelMeters.AutoSize = true;
-            this.labelMeters.Location = new System.Drawing.Point(165, 92);
-            this.labelMeters.Name = "labelMeters";
-            this.labelMeters.Size = new System.Drawing.Size(16, 15);
-            this.labelMeters.TabIndex = 3;
-            this.labelMeters.Text = "м";
+            labelMeters.AutoSize = true;
+            labelMeters.Location = new Point(165, 92);
+            labelMeters.Name = "labelMeters";
+            labelMeters.Size = new Size(16, 15);
+            labelMeters.TabIndex = 3;
+            labelMeters.Text = "м";
             // 
             // AreaTextBox
             // 
-            this.AreaTextBox.Location = new System.Drawing.Point(87, 88);
-            this.AreaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.AreaTextBox.Name = "AreaTextBox";
-            this.AreaTextBox.Size = new System.Drawing.Size(72, 23);
-            this.AreaTextBox.TabIndex = 2;
-            this.AreaTextBox.TextChanged += new System.EventHandler(this.AreaTextBox_TextChanged);
-            this.AreaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AreaTextBox_KeyPress);
+            AreaTextBox.Location = new Point(87, 88);
+            AreaTextBox.Margin = new Padding(3, 2, 3, 2);
+            AreaTextBox.Name = "AreaTextBox";
+            AreaTextBox.Size = new Size(72, 23);
+            AreaTextBox.TabIndex = 2;
+            AreaTextBox.TextChanged += AreaTextBox_TextChanged;
+            AreaTextBox.KeyPress += AreaTextBox_KeyPress;
             // 
             // CircleCheckBox
             // 
-            this.CircleCheckBox.AutoSize = true;
-            this.CircleCheckBox.Location = new System.Drawing.Point(9, 20);
-            this.CircleCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CircleCheckBox.Name = "CircleCheckBox";
-            this.CircleCheckBox.Size = new System.Drawing.Size(51, 19);
-            this.CircleCheckBox.TabIndex = 1;
-            this.CircleCheckBox.Text = "Круг";
-            this.CircleCheckBox.UseVisualStyleBackColor = true;
+            CircleCheckBox.AutoSize = true;
+            CircleCheckBox.Location = new Point(9, 20);
+            CircleCheckBox.Margin = new Padding(3, 2, 3, 2);
+            CircleCheckBox.Name = "CircleCheckBox";
+            CircleCheckBox.Size = new Size(51, 19);
+            CircleCheckBox.TabIndex = 1;
+            CircleCheckBox.Text = "Круг";
+            CircleCheckBox.UseVisualStyleBackColor = true;
             // 
             // FilterButton
             // 
-            this.FilterButton.Location = new System.Drawing.Point(18, 131);
-            this.FilterButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FilterButton.Name = "FilterButton";
-            this.FilterButton.Size = new System.Drawing.Size(175, 22);
-            this.FilterButton.TabIndex = 1;
-            this.FilterButton.Text = "Отфильтровать";
-            this.FilterButton.UseVisualStyleBackColor = true;
-            this.FilterButton.Click += new System.EventHandler(this.ButtonFilter_Click);
+            FilterButton.Location = new Point(12, 131);
+            FilterButton.Margin = new Padding(3, 2, 3, 2);
+            FilterButton.Name = "FilterButton";
+            FilterButton.Size = new Size(188, 22);
+            FilterButton.TabIndex = 1;
+            FilterButton.Text = "Отфильтровать";
+            FilterButton.UseVisualStyleBackColor = true;
+            FilterButton.Click += ButtonFilter_Click;
             // 
             // FilterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(212, 160);
-            this.Controls.Add(this.FilterButton);
-            this.Controls.Add(this.groupBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaximizeBox = false;
-            this.Name = "FilterForm";
-            this.Text = "Фильтр";
-            this.groupBox.ResumeLayout(false);
-            this.groupBox.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlLightLight;
+            ClientSize = new Size(212, 160);
+            Controls.Add(FilterButton);
+            Controls.Add(groupBox);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
+            Name = "FilterForm";
+            Text = "Фильтр";
+            groupBox.ResumeLayout(false);
+            groupBox.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

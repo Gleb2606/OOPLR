@@ -39,7 +39,7 @@
             // labelSideA
             // 
             this.labelSideA.AutoSize = true;
-            this.labelSideA.Location = new System.Drawing.Point(3, 18);
+            this.labelSideA.Location = new System.Drawing.Point(18, 15);
             this.labelSideA.Name = "labelSideA";
             this.labelSideA.Size = new System.Drawing.Size(65, 15);
             this.labelSideA.TabIndex = 0;
@@ -48,32 +48,32 @@
             // labelHeightA
             // 
             this.labelHeightA.AutoSize = true;
-            this.labelHeightA.Location = new System.Drawing.Point(8, 51);
+            this.labelHeightA.Location = new System.Drawing.Point(18, 45);
             this.labelHeightA.Name = "labelHeightA";
-            this.labelHeightA.Size = new System.Drawing.Size(58, 15);
+            this.labelHeightA.Size = new System.Drawing.Size(64, 15);
             this.labelHeightA.TabIndex = 1;
             this.labelHeightA.Text = "Высота А";
             // 
             // HeightA
             // 
-            this.HeightA.Location = new System.Drawing.Point(79, 15);
+            this.HeightA.Location = new System.Drawing.Point(88, 12);
             this.HeightA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HeightA.Name = "HeightA";
-            this.HeightA.Size = new System.Drawing.Size(110, 23);
+            this.HeightA.Size = new System.Drawing.Size(100, 23);
             this.HeightA.TabIndex = 2;
             // 
             // SideA
             // 
-            this.SideA.Location = new System.Drawing.Point(79, 48);
+            this.SideA.Location = new System.Drawing.Point(88, 42);
             this.SideA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SideA.Name = "SideA";
-            this.SideA.Size = new System.Drawing.Size(110, 23);
+            this.SideA.Size = new System.Drawing.Size(100, 23);
             this.SideA.TabIndex = 3;
             // 
             // labelMetersSideA
             // 
             this.labelMetersSideA.AutoSize = true;
-            this.labelMetersSideA.Location = new System.Drawing.Point(192, 15);
+            this.labelMetersSideA.Location = new System.Drawing.Point(194, 15);
             this.labelMetersSideA.Name = "labelMetersSideA";
             this.labelMetersSideA.Size = new System.Drawing.Size(16, 15);
             this.labelMetersSideA.TabIndex = 4;
@@ -82,7 +82,7 @@
             // labelMetersHeightA
             // 
             this.labelMetersHeightA.AutoSize = true;
-            this.labelMetersHeightA.Location = new System.Drawing.Point(192, 48);
+            this.labelMetersHeightA.Location = new System.Drawing.Point(194, 45);
             this.labelMetersHeightA.Name = "labelMetersHeightA";
             this.labelMetersHeightA.Size = new System.Drawing.Size(16, 15);
             this.labelMetersHeightA.TabIndex = 5;

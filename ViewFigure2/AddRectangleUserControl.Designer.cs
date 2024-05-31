@@ -28,82 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelSideA = new System.Windows.Forms.Label();
-            this.labelSideB = new System.Windows.Forms.Label();
-            this.SideA = new System.Windows.Forms.TextBox();
-            this.SideB = new System.Windows.Forms.TextBox();
-            this.labelMetersSideA = new System.Windows.Forms.Label();
-            this.labelMetersSideB = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            labelSideA = new Label();
+            labelSideB = new Label();
+            SideA = new TextBox();
+            SideB = new TextBox();
+            labelMetersSideA = new Label();
+            labelMetersSideB = new Label();
+            SuspendLayout();
             // 
             // labelSideA
             // 
-            this.labelSideA.AutoSize = true;
-            this.labelSideA.Location = new System.Drawing.Point(18, 15);
-            this.labelSideA.Name = "labelSideA";
-            this.labelSideA.Size = new System.Drawing.Size(65, 15);
-            this.labelSideA.TabIndex = 0;
-            this.labelSideA.Text = "Сторона A";
+            labelSideA.AutoSize = true;
+            labelSideA.Location = new Point(18, 15);
+            labelSideA.Name = "labelSideA";
+            labelSideA.Size = new Size(65, 15);
+            labelSideA.TabIndex = 0;
+            labelSideA.Text = "Сторона A";
             // 
             // labelSideB
             // 
-            this.labelSideB.AutoSize = true;
-            this.labelSideB.Location = new System.Drawing.Point(18, 45);
-            this.labelSideB.Name = "labelSideB";
-            this.labelSideB.Size = new System.Drawing.Size(64, 15);
-            this.labelSideB.TabIndex = 1;
-            this.labelSideB.Text = "Сторона В";
+            labelSideB.AutoSize = true;
+            labelSideB.Location = new Point(18, 45);
+            labelSideB.Name = "labelSideB";
+            labelSideB.Size = new Size(64, 15);
+            labelSideB.TabIndex = 1;
+            labelSideB.Text = "Сторона В";
             // 
             // SideA
             // 
-            this.SideA.Location = new System.Drawing.Point(89, 15);
-            this.SideA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SideA.Name = "SideA";
-            this.SideA.Size = new System.Drawing.Size(100, 23);
-            this.SideA.TabIndex = 3;
+            SideA.Location = new Point(88, 12);
+            SideA.Margin = new Padding(3, 2, 3, 2);
+            SideA.Name = "SideA";
+            SideA.Size = new Size(100, 23);
+            SideA.TabIndex = 3;
             // 
             // SideB
             // 
-            this.SideB.Location = new System.Drawing.Point(88, 45);
-            this.SideB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SideB.Name = "SideB";
-            this.SideB.Size = new System.Drawing.Size(101, 23);
-            this.SideB.TabIndex = 4;
+            SideB.Location = new Point(88, 42);
+            SideB.Margin = new Padding(3, 2, 3, 2);
+            SideB.Name = "SideB";
+            SideB.Size = new Size(100, 23);
+            SideB.TabIndex = 4;
             // 
             // labelMetersSideA
             // 
-            this.labelMetersSideA.AutoSize = true;
-            this.labelMetersSideA.Location = new System.Drawing.Point(192, 18);
-            this.labelMetersSideA.Name = "labelMetersSideA";
-            this.labelMetersSideA.Size = new System.Drawing.Size(16, 15);
-            this.labelMetersSideA.TabIndex = 6;
-            this.labelMetersSideA.Text = "м";
+            labelMetersSideA.AutoSize = true;
+            labelMetersSideA.Location = new Point(194, 15);
+            labelMetersSideA.Name = "labelMetersSideA";
+            labelMetersSideA.Size = new Size(16, 15);
+            labelMetersSideA.TabIndex = 6;
+            labelMetersSideA.Text = "м";
             // 
             // labelMetersSideB
             // 
-            this.labelMetersSideB.AutoSize = true;
-            this.labelMetersSideB.Location = new System.Drawing.Point(192, 48);
-            this.labelMetersSideB.Name = "labelMetersSideB";
-            this.labelMetersSideB.Size = new System.Drawing.Size(16, 15);
-            this.labelMetersSideB.TabIndex = 7;
-            this.labelMetersSideB.Text = "м";
+            labelMetersSideB.AutoSize = true;
+            labelMetersSideB.Location = new Point(194, 45);
+            labelMetersSideB.Name = "labelMetersSideB";
+            labelMetersSideB.Size = new Size(16, 15);
+            labelMetersSideB.TabIndex = 7;
+            labelMetersSideB.Text = "м";
             // 
             // AddRectangleUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.labelMetersSideA);
-            this.Controls.Add(this.labelMetersSideB);
-            this.Controls.Add(this.SideA);
-            this.Controls.Add(this.SideB);
-            this.Controls.Add(this.labelSideA);
-            this.Controls.Add(this.labelSideB);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "AddRectangleUserControl";
-            this.Size = new System.Drawing.Size(219, 105);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(labelMetersSideA);
+            Controls.Add(labelMetersSideB);
+            Controls.Add(SideA);
+            Controls.Add(SideB);
+            Controls.Add(labelSideA);
+            Controls.Add(labelSideB);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "AddRectangleUserControl";
+            Size = new Size(219, 105);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

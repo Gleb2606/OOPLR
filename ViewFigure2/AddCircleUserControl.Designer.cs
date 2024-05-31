@@ -28,50 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelRadius = new System.Windows.Forms.Label();
-            this.Radius = new System.Windows.Forms.TextBox();
-            this.labelMeters = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            labelRadius = new Label();
+            Radius = new TextBox();
+            labelMeters = new Label();
+            SuspendLayout();
             // 
             // labelRadius
             // 
-            this.labelRadius.AutoSize = true;
-            this.labelRadius.Location = new System.Drawing.Point(18, 18);
-            this.labelRadius.Name = "labelRadius";
-            this.labelRadius.Size = new System.Drawing.Size(45, 15);
-            this.labelRadius.TabIndex = 0;
-            this.labelRadius.Text = "Радиус";
+            labelRadius.AutoSize = true;
+            labelRadius.Location = new Point(18, 15);
+            labelRadius.Name = "labelRadius";
+            labelRadius.Size = new Size(65, 15);
+            labelRadius.TabIndex = 0;
+            labelRadius.Text = "Радиус";
             // 
             // Radius
             // 
-            this.Radius.Location = new System.Drawing.Point(69, 15);
-            this.Radius.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Radius.Name = "Radius";
-            this.Radius.Size = new System.Drawing.Size(120, 23);
-            this.Radius.TabIndex = 1;
+            Radius.Location = new Point(88, 12);
+            Radius.Margin = new Padding(3, 2, 3, 2);
+            Radius.Name = "Radius";
+            Radius.Size = new Size(100, 23);
+            Radius.TabIndex = 1;
             // 
             // labelMeters
             // 
-            this.labelMeters.AutoSize = true;
-            this.labelMeters.Location = new System.Drawing.Point(195, 18);
-            this.labelMeters.Name = "labelMeters";
-            this.labelMeters.Size = new System.Drawing.Size(16, 15);
-            this.labelMeters.TabIndex = 2;
-            this.labelMeters.Text = "м";
+            labelMeters.AutoSize = true;
+            labelMeters.Location = new Point(194, 15);
+            labelMeters.Name = "labelMeters";
+            labelMeters.Size = new Size(16, 15);
+            labelMeters.TabIndex = 2;
+            labelMeters.Text = "м";
             // 
             // AddCircleUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.labelMeters);
-            this.Controls.Add(this.Radius);
-            this.Controls.Add(this.labelRadius);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "AddCircleUserControl";
-            this.Size = new System.Drawing.Size(219, 45);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(labelMeters);
+            Controls.Add(Radius);
+            Controls.Add(labelRadius);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "AddCircleUserControl";
+            Size = new Size(219, 45);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

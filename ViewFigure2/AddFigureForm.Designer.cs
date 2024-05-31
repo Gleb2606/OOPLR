@@ -36,8 +36,8 @@
             addCircleUserControl = new AddCircleUserControl();
             addRectangleUserControl = new AddRectangleUserControl();
             addTriangleUserControl = new AddTriangleUserControl();
-            groupBox1 = new GroupBox();
-            groupBox1.SuspendLayout();
+            groupBox = new GroupBox();
+            groupBox.SuspendLayout();
             SuspendLayout();
             // 
             // Random
@@ -124,17 +124,17 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(addTriangleUserControl);
-            groupBox1.Controls.Add(addRectangleUserControl);
-            groupBox1.Controls.Add(addCircleUserControl);
-            groupBox1.Location = new Point(18, 75);
-            groupBox1.Margin = new Padding(3, 2, 3, 2);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 2, 3, 2);
-            groupBox1.Size = new Size(262, 128);
-            groupBox1.TabIndex = 30;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Параметры фигуры";
+            groupBox.Controls.Add(addTriangleUserControl);
+            groupBox.Controls.Add(addRectangleUserControl);
+            groupBox.Controls.Add(addCircleUserControl);
+            groupBox.Location = new Point(18, 75);
+            groupBox.Margin = new Padding(3, 2, 3, 2);
+            groupBox.Name = "groupBox1";
+            groupBox.Padding = new Padding(3, 2, 3, 2);
+            groupBox.Size = new Size(262, 128);
+            groupBox.TabIndex = 30;
+            groupBox.TabStop = false;
+            groupBox.Text = "Параметры фигуры";
             // 
             // AddFigureForm
             // 
@@ -142,7 +142,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(299, 246);
-            Controls.Add(groupBox1);
+            Controls.Add(groupBox);
             Controls.Add(Random);
             Controls.Add(Cancel);
             Controls.Add(OK);
@@ -155,7 +155,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Добавление фигуры";
             Load += AddForm_Load;
-            groupBox1.ResumeLayout(false);
+            groupBox.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -169,6 +169,6 @@
         private AddCircleUserControl addCircleUserControl;
         private AddRectangleUserControl addRectangleUserControl;
         private AddTriangleUserControl addTriangleUserControl;
-        private GroupBox groupBox1;
+        private GroupBox groupBox;
     }
 }

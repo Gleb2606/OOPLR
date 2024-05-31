@@ -55,9 +55,9 @@ namespace ViewFigure
         /// <param name="e"></param>
         private void DeleteFigureButton_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedCells.Count != 0)
+            if (dataGridView.SelectedCells.Count != 0)
             {
-                foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                foreach (DataGridViewRow row in dataGridView.SelectedRows)
                 {
                     _figureList.Remove(row.DataBoundItem as FigureBase);
 
@@ -74,7 +74,7 @@ namespace ViewFigure
         private void Form1_Load(object sender, EventArgs e)
         {
             _figureList = new BindingList<FigureBase>();
-            CreateTable(_figureList, dataGridView1);
+            CreateTable(_figureList, dataGridView);
         }
 
         /// <summary>
@@ -166,8 +166,8 @@ namespace ViewFigure
                         _serializer.Deserialize(file);
                 }
 
-                dataGridView1.DataSource = _figureList;
-                dataGridView1.CurrentCell = null;
+                dataGridView.DataSource = _figureList;
+                dataGridView.CurrentCell = null;
                 MessageBox.Show("Файл успешно загружен.",
                     "Загрузка завершена",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -192,7 +192,7 @@ namespace ViewFigure
             newFilterForm.Show();
             newFilterForm.FigureFiltered += (sender, figureEventArgs) =>
             {
-                dataGridView1.DataSource = ((FigureListEventArgs)figureEventArgs).FigureList;
+                dataGridView.DataSource = ((FigureListEventArgs)figureEventArgs).FigureList;
                 _filteredList = ((FigureListEventArgs)figureEventArgs).FigureList;
             };
         }
@@ -204,7 +204,7 @@ namespace ViewFigure
         /// <param name="e"></param>
         private void CleanFilterButton_Click(object sender, EventArgs e)
         {
-            CreateTable(_figureList, dataGridView1);
+            CreateTable(_figureList, dataGridView);
         }
 
     }

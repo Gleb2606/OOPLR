@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox = new System.Windows.Forms.GroupBox();
             this.AreaCheckBox = new System.Windows.Forms.CheckBox();
             this.RectangleCheckBox = new System.Windows.Forms.CheckBox();
             this.TriangleCheckBox = new System.Windows.Forms.CheckBox();
@@ -36,25 +36,25 @@
             this.AreaTextBox = new System.Windows.Forms.TextBox();
             this.CircleCheckBox = new System.Windows.Forms.CheckBox();
             this.FilterButton = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.AreaCheckBox);
-            this.groupBox1.Controls.Add(this.RectangleCheckBox);
-            this.groupBox1.Controls.Add(this.TriangleCheckBox);
-            this.groupBox1.Controls.Add(this.labelMeters);
-            this.groupBox1.Controls.Add(this.AreaTextBox);
-            this.groupBox1.Controls.Add(this.CircleCheckBox);
-            this.groupBox1.Location = new System.Drawing.Point(12, 11);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(188, 116);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Параметры фильтрации";
+            this.groupBox.Controls.Add(this.AreaCheckBox);
+            this.groupBox.Controls.Add(this.RectangleCheckBox);
+            this.groupBox.Controls.Add(this.TriangleCheckBox);
+            this.groupBox.Controls.Add(this.labelMeters);
+            this.groupBox.Controls.Add(this.AreaTextBox);
+            this.groupBox.Controls.Add(this.CircleCheckBox);
+            this.groupBox.Location = new System.Drawing.Point(12, 11);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox.Name = "groupBox1";
+            this.groupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox.Size = new System.Drawing.Size(188, 116);
+            this.groupBox.TabIndex = 0;
+            this.groupBox.TabStop = false;
+            this.groupBox.Text = "Параметры фильтрации";
             // 
             // AreaCheckBox
             // 
@@ -138,21 +138,21 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(212, 160);
             this.Controls.Add(this.FilterButton);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "FilterForm";
             this.Text = "Фильтр";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox.ResumeLayout(false);
+            this.groupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private GroupBox groupBox1;
+        private GroupBox groupBox;
         private Label labelMeters;
         private TextBox AreaTextBox;
         private CheckBox CircleCheckBox;

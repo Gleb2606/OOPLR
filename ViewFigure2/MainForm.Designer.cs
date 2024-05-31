@@ -30,19 +30,19 @@
         {
             DeleteFigureButton = new Button();
             AddFigureButton = new Button();
-            groupBox1 = new GroupBox();
-            dataGridView1 = new DataGridView();
+            groupBox = new GroupBox();
+            dataGridView = new DataGridView();
             CleanListButton = new Button();
-            toolStrip1 = new ToolStrip();
-            toolStripDropDownButton1 = new ToolStripDropDownButton();
+            toolStrip = new ToolStrip();
+            toolStripDropDownButton = new ToolStripDropDownButton();
             SaveFileToolStripMenuItem = new ToolStripMenuItem();
             OpenFileToolStripMenuItem = new ToolStripMenuItem();
-            toolStripButton1 = new ToolStripButton();
+            toolStripButton = new ToolStripButton();
             FilterButton = new Button();
             CleanFilterButton = new Button();
-            groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            toolStrip1.SuspendLayout();
+            groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
+            toolStrip.SuspendLayout();
             SuspendLayout();
             // 
             // DeleteFigureButton
@@ -69,28 +69,28 @@
             // 
             // groupBox1
             // 
-            groupBox1.BackColor = SystemColors.ControlLightLight;
-            groupBox1.Controls.Add(dataGridView1);
-            groupBox1.Location = new Point(4, 30);
-            groupBox1.Margin = new Padding(3, 2, 3, 2);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 2, 3, 2);
-            groupBox1.Size = new Size(463, 188);
-            groupBox1.TabIndex = 4;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Список фигур";
+            groupBox.BackColor = SystemColors.ControlLightLight;
+            groupBox.Controls.Add(dataGridView);
+            groupBox.Location = new Point(4, 30);
+            groupBox.Margin = new Padding(3, 2, 3, 2);
+            groupBox.Name = "groupBox1";
+            groupBox.Padding = new Padding(3, 2, 3, 2);
+            groupBox.Size = new Size(463, 188);
+            groupBox.TabIndex = 4;
+            groupBox.TabStop = false;
+            groupBox.Text = "Список фигур";
             // 
             // dataGridView1
             // 
-            dataGridView1.BackgroundColor = SystemColors.InactiveCaption;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(9, 20);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(448, 164);
-            dataGridView1.TabIndex = 0;
+            dataGridView.BackgroundColor = SystemColors.InactiveCaption;
+            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView.Location = new Point(9, 20);
+            dataGridView.Margin = new Padding(3, 2, 3, 2);
+            dataGridView.Name = "dataGridView1";
+            dataGridView.RowHeadersWidth = 51;
+            dataGridView.RowTemplate.Height = 29;
+            dataGridView.Size = new Size(448, 164);
+            dataGridView.TabIndex = 0;
             // 
             // CleanListButton
             // 
@@ -105,22 +105,22 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripDropDownButton1, toolStripButton1 });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(473, 25);
-            toolStrip1.TabIndex = 8;
-            toolStrip1.Text = "toolStrip1";
+            toolStrip.ImageScalingSize = new Size(20, 20);
+            toolStrip.Items.AddRange(new ToolStripItem[] { toolStripDropDownButton, toolStripButton });
+            toolStrip.Location = new Point(0, 0);
+            toolStrip.Name = "toolStrip1";
+            toolStrip.Size = new Size(473, 25);
+            toolStrip.TabIndex = 8;
+            toolStrip.Text = "toolStrip1";
             // 
             // toolStripDropDownButton1
             // 
-            toolStripDropDownButton1.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripDropDownButton1.DropDownItems.AddRange(new ToolStripItem[] { SaveFileToolStripMenuItem, OpenFileToolStripMenuItem });
-            toolStripDropDownButton1.ImageTransparentColor = Color.Magenta;
-            toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            toolStripDropDownButton1.Size = new Size(49, 22);
-            toolStripDropDownButton1.Text = "Файл";
+            toolStripDropDownButton.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripDropDownButton.DropDownItems.AddRange(new ToolStripItem[] { SaveFileToolStripMenuItem, OpenFileToolStripMenuItem });
+            toolStripDropDownButton.ImageTransparentColor = Color.Magenta;
+            toolStripDropDownButton.Name = "toolStripDropDownButton1";
+            toolStripDropDownButton.Size = new Size(49, 22);
+            toolStripDropDownButton.Text = "Файл";
             // 
             // SaveFileToolStripMenuItem
             // 
@@ -138,11 +138,11 @@
             // 
             // toolStripButton1
             // 
-            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(23, 22);
-            toolStripButton1.Text = "toolStripButton1";
+            toolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButton.ImageTransparentColor = Color.Magenta;
+            toolStripButton.Name = "toolStripButton1";
+            toolStripButton.Size = new Size(23, 22);
+            toolStripButton.Text = "toolStripButton1";
             // 
             // FilterButton
             // 
@@ -175,10 +175,10 @@
             Controls.Add(CleanFilterButton);
             Controls.Add(CleanListButton);
             Controls.Add(FilterButton);
-            Controls.Add(toolStrip1);
+            Controls.Add(toolStrip);
             Controls.Add(DeleteFigureButton);
             Controls.Add(AddFigureButton);
-            Controls.Add(groupBox1);
+            Controls.Add(groupBox);
             ForeColor = SystemColors.Desktop;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
@@ -187,10 +187,10 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Расчёт площади фигур";
             Load += Form1_Load;
-            groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
+            groupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
+            toolStrip.ResumeLayout(false);
+            toolStrip.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -199,16 +199,16 @@
 
         private Button DeleteFigureButton;
         private Button AddFigureButton;
-        private GroupBox groupBox1;
-        public DataGridView dataGridView1;
+        private GroupBox groupBox;
+        public DataGridView dataGridView;
         private Button CleanListButton;
-        private ToolStrip toolStrip1;
-        private ToolStripDropDownButton toolStripDropDownButton1;
+        private ToolStrip toolStrip;
+        private ToolStripDropDownButton toolStripDropDownButton;
         private ToolStripMenuItem SaveFileToolStripMenuItem;
         private ToolStripMenuItem OpenFileToolStripMenuItem;
         private Button FilterButton;
         private Button CleanFilterButton;
-        private ToolStripButton toolStripButton1;
+        private ToolStripButton toolStripButton;
 
     }
 }

@@ -182,8 +182,8 @@ namespace ViewFigure
             catch(ArgumentException ex) 
             {
                 MessageBox.Show("Ошибка при загрузке файла:\n" + ex.Message,
-                "Ошибка",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    "Ошибка",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception)
             {
@@ -219,6 +219,5 @@ namespace ViewFigure
         {
             CreateTable(_figureList, dataGridView);
         }
-
     }
 }

@@ -32,7 +32,6 @@ namespace ViewFigure
         /// </summary>
         public EventHandler<EventArgs> FigureFiltered;
         
-        //TODO: RSDN +
         /// <summary>
         /// Площадь
         /// </summary>
@@ -92,7 +91,6 @@ namespace ViewFigure
                 AreaCheckBox.Enabled = true;
             }
         }
-        //TODO: RSDN +
         /// <summary>
         /// Кнопка поиска
         /// </summary>
@@ -115,10 +113,8 @@ namespace ViewFigure
 
             foreach (FigureBase figure in _listFigure)
             {
-
                 switch (figure)
                 {
-                    //TODO: RSDN +
                     case Circle when CircleCheckBox.Checked:
                     case Model.Rectangle when RectangleCheckBox.Checked:
                     case Triangle when TriangleCheckBox.Checked:

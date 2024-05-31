@@ -12,13 +12,11 @@ using System.Windows.Forms;
 
 namespace ViewFigure
 {
-    //TODO: XML +
     /// <summary>
     /// Пользовательское действие добавление треугольника
     /// </summary>
     public partial class AddTriangleUserControl : UserControl, IAddFigure
     {
-        //TODO: XML +
         /// <summary>
         /// Инициализация добавления треугольника
         /// </summary>
@@ -30,7 +28,6 @@ namespace ViewFigure
             HeightA.KeyPress += TextBox_KeyPress;
         }
 
-        //TODO: duplication +
         /// <summary>
         /// Обработчик события KeyPress для текстовых полей.
         /// </summary>
@@ -41,7 +38,6 @@ namespace ViewFigure
             ReadDataFromTextBox.CheckInput(e);
         }
 
-        //TODO: duplication+
         /// <summary>
         /// метод добавления круга
         /// </summary>

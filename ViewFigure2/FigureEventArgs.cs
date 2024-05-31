@@ -7,7 +7,6 @@ using Model;
 
 namespace ViewFigure
 {
-    //TODO: XML +
     /// <summary>
     /// Пользовательское действие добавление фигуры
     /// </summary>

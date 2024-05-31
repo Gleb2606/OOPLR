@@ -27,7 +27,6 @@ namespace ViewFigure
         private readonly Dictionary<string, UserControl>
             _comboBoxToUserControl;
 
-        //TODO: refactor +
 
         /// <summary>
         /// Форма добавления фигур
@@ -42,16 +41,16 @@ namespace ViewFigure
 #if !DEBUG
             Random.Visible = false;
 #endif
-            string[] typeFigure = { "Круг", "Прямоугольник", "Треугольник" };
-
-            comboBoxFigures.Items.AddRange(typeFigure);
-
+            
             _comboBoxToUserControl = new Dictionary<string, UserControl>()
             {
-                {typeFigure[0], addCircleUserControl},
-                {typeFigure[1], addRectangleUserControl},
-                {typeFigure[2], addTriangleUserControl}
+                {"Круг", addCircleUserControl},
+                {"Прямоугольник", addRectangleUserControl},
+                {"Треугольник", addTriangleUserControl}
             };
+
+            comboBoxFigures.Items.AddRange(
+                _comboBoxToUserControl.Keys.ToArray());
         }
 
         /// <summary>
@@ -80,14 +79,12 @@ namespace ViewFigure
 
             foreach (var (figure, userControl) in _comboBoxToUserControl)
             {
-                userControl.Visible = figureType == figure;
- 
+                userControl.Visible = figureType == figure; 
             }
 
             OK.Enabled = _comboBoxToUserControl.ContainsKey(figureType); 
         }
 
-        //TODO: RSDN +
         /// <summary>
         /// Применить.
         /// </summary>
@@ -112,7 +109,6 @@ namespace ViewFigure
             }
         }
 
-        //TODO: RSDN +
         /// <summary>
         /// Закрыть.
         /// </summary>
@@ -123,8 +119,6 @@ namespace ViewFigure
             Close();
         }
 
-        //TODO: RSDN +
-        //TODO: preprocessor directives +
 #if DEBUG
         /// <summary>
         /// Рандом.
@@ -149,6 +143,5 @@ namespace ViewFigure
             }
         }
 #endif
-
     }
 }

@@ -12,13 +12,11 @@ using Model;
 
 namespace ViewFigure
 {
-    //TODO: XML +
     /// <summary>
     /// Пользовательское действие добавление круга
     /// </summary>
     public partial class AddCircleUserControl : UserControl, IAddFigure
     {
-        //TODO: XML +
         /// <summary>
         /// Инициализация добавления круга
         /// </summary>
@@ -45,11 +43,10 @@ namespace ViewFigure
         /// <returns></returns>
         public FigureBase AddFigure()
         {
-            var circle = new Circle();
-
-            circle.Radius = ReadDataFromTextBox.CheckNumber(Radius.Text);
-
-            return circle;
+            return new Circle()
+            {
+                Radius = ReadDataFromTextBox.CheckNumber(Radius.Text)
+            };
         }
     }
 }

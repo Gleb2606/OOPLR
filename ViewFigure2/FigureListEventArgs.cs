@@ -8,7 +8,6 @@ using Model;
 
 namespace ViewFigure
 {
-    //TODO: XML +
     /// <summary>
     /// Действия при добавлении списка фигур
     /// </summary>

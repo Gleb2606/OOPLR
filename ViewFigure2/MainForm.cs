@@ -165,12 +165,25 @@ namespace ViewFigure
                     _figureList = (BindingList<FigureBase>)
                         _serializer.Deserialize(file);
                 }
+                foreach (var figure in _figureList)
+                {
+                    if (double.IsNaN(figure.Area))
+                    {
+                        throw new ArgumentException("Файл поврежден");
+                    }
+                }
 
                 dataGridView.DataSource = _figureList;
                 dataGridView.CurrentCell = null;
                 MessageBox.Show("Файл успешно загружен.",
                     "Загрузка завершена",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch(ArgumentException ex) 
+            {
+                MessageBox.Show("Ошибка при загрузке файла: " + ex.Message,
+                "Ошибка",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception)
             {

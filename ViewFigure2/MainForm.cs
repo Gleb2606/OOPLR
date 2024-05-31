@@ -181,13 +181,13 @@ namespace ViewFigure
             }
             catch(ArgumentException ex) 
             {
-                MessageBox.Show("Ошибка при загрузке файла: " + ex.Message,
+                MessageBox.Show("Ошибка при загрузке файла:\n" + ex.Message,
                 "Ошибка",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception)
             {
-                MessageBox.Show("Не удалось загрузить файл.\n" +
+                MessageBox.Show("Ошибка при загрузке файла:\n" +
                     "Файл повреждён или не соответствует формату.",
                     "Ошибка",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
